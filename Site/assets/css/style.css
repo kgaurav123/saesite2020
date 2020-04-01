@@ -326,7 +326,7 @@ p {
 
 /* ========= Counter ============= */
 .counter {
-    background-image: url("/static/images/counter-bg.jpg");
+    background-image: url("../images/car-bg.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -362,7 +362,13 @@ p {
     font-family: "Source Sans Pro", sans-serif;
 }
 
-
+/*-----BAJA-----*/
+#carbaja{
+    height:200px;
+    width: 400px;
+     margin-left: 50%;
+     transform: translateX(-50%);
+}
 /* ========= Download Now ============= */
 .download-now img {
     width: 100%;
