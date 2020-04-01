@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>SAE-NIT Durgapur</title>
+<meta charset="utf-8">
+<meta name="description" content="Simple, clean, responsive website built with html5, CSS3, Js, jQuery and Bootstrap">
+<meta name="keywords" content="web, design, html, css, html5, css3, javascript, jquery, bootstrap, development">
+<meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+       
+        
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Raleway:500italic,600italic,600,700,700italic,300italic,300,400,400italic,800,900' rel='stylesheet' type='text/css'>
+        
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,600italic,700,900' rel='stylesheet' type='text/css'>
+        
+<!-- favicon -->
+<link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+        
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+        
+<!-- Fontawesome  -->
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        
+<!-- Animate CSS -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+        
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        
+<!-- BX slider CSS -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.bxslider.css' %}">
+        
+<!-- responsive css -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+        
+</head>
+<body>
+
+ <!-- Header -->
+<header class="header" id="HOME">          
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#loso-navbar-collapse-1" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#">
+<!-- small size logo -->
+<h3>SAE-brand-holder</h3>
+</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="loso-navbar-collapse-1">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="#HOME" class="nav-item">HOME</a></li>
+<li><a href="#ABOUT" class="nav-item">ABOUT</a></li>
+<li><a href="#FEATURES" class="nav-item">EVENTS</a></li>
+<li><a href="#DOWNLOAD" class="nav-item">BLOG</a></li>
+<li><a href="#SCREENS" class="nav-item">SAE BAJA</a></li>
+<li><a href="#CONTACT" class="nav-item">CONTACT</a></li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</div>
+<!-- /.container-fluid -->
+</nav>
+<div class="header-overlay">
+<div class="container header-container">
+<div class="row">
+<div class="col-md-8">
+<div class="header-text">
+<!-- Title & Description -->
+<h1> SAE</h1>
+<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero eligendi amet dolores at odit, libero similique culpa reprehenderit dolorem dolor, placeat repellat iure officiis earum maxime tempore suscipit, cumque fugit?</p>
+</div>
+</div>
+<div class="col-md-3 col-md-offset-1">
+</div>
+</div>                
+</div>            
+</div>            
+</header>
+{% block body %}
+{% endblock body %}
+<!-- Bootstrap JavaScript -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+        
+<!-- Bx Slider JS -->
+<script src="{% static 'js/jquery.bxslider.min.js' %}"></script>
+        
+<!-- Add JS counter lib -->
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+   
+<!-- Add wow js lib -->
+<script src="{% static 'js/wow.min.js' %}"></script>
+     
+<!-- Custom Js -->
+<script src="{% static 'js/custom.js' %}"></script>
+</body>   
+</html>
