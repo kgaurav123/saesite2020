@@ -359,7 +359,7 @@
                             
                                 <div><i class="fa fa-check"></i></div>
                                 <h2><span class="counter-num"> 1066 </span><span>+</span></h2>
-                                <p>LIKES</p>
+                                <p>MEMBERS</p>
                             </div>
                         
                         </div>
@@ -369,7 +369,7 @@
                             
                                 <div><i class="fa fa-heart-o"></i></div>
                                 <h2><span class="counter-num"> 199 </span><span>+</span></h2>
-                                <p>WORKSHOPS</p>
+                                <p>LIKES</p>
                             </div>
                         
                         </div>
@@ -400,6 +400,7 @@
                             <h2> SAE BAJA</h2>
                             <p>Mauris a mauris feugiat, luctus mauris a, sollicitudin ex. Pellentesque et tortor in risus elementum aliquet. Etiam facilisis justo urna, id feugiat magna scelerisque non.
                             </p>
+                            <button type="button" class="btn btn-outline-primary" style="margin-left: 50%;transform: translateX(-50%);border: 1px solid #129CF3;text-decoration: none;"><a href="{% url 'baja'%}"> LEARN MORE</a></button>
                         </div>
                     
                     </div>
@@ -409,12 +410,16 @@
             
             </div>
             
-            <div class="screen-slider wow bounceInRight" data-wow-duration="1s">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="screen-slider wow fadeInUp data-wow-duration="1s">
             
-                <!--PUT EVERYTHING HERE FOR AN ANIMATION-->
-            
-            
-            
+                        <!--PUT EVERYTHING HERE FOR AN ANIMATION-->
+                    
+                        <img src="{%static 'images/car.png'%}" alt="" style="height:200px;width: 400px; margin-left: 50%;transform: translateX(-50%);">
+                    
+                    </div>
+                </div>
             </div>
             
         
@@ -451,10 +456,19 @@
             
                 <div class="row">
                 
-                    <div class="col-md-8 col-md-offset-2 wow fadeInUp" data-wow-duration="1s">
+                    <div class="col-md-6 wow fadeInUp" data-wow-duration="1s">
                     
                             <!--Put here something for a fadeinup animation-->
+                            <div class="image-blog">
+                                <img src="{% static 'images/blogging.png' %}" alt="">
+                            </div>
                     </div>
+                    <div class="col-md-4 wow fadeInLeft blog-text" data-wow-duration="1s" style="padding-top: 50px;font-size: 22px;">
+                    
+                        <!--Put here something for a fadeinup animation-->
+                        <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi similique hic facere velit molestias tenetur quidem nam sint? Adipisci in neque architecto molestias, optio suscipit numquam consequatur sunt commodi! Ipsa, sapiente veniam voluptate accusantium atque soluta. Cumque iusto ipsam sequi doloremque laborum id ipsum sapiente accusantium obcaecati molestias quisquam, illo amet repellendus eum esse modi quia cum. Repudiandae, excepturi porro.</p>
+                            <button type="button" class="btn btn-outline-primary" style="margin-left: 50%;transform: translateX(-50%);border: 1px solid #129CF3;text-decoration: none;"><a href="#"> LEARN MORE</a></button>    
+                </div>
                     
                     
                 </div>
