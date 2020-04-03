@@ -1,0 +1,10 @@
+{% load static %}
+<title>SAE</title>
+<h1>Manual</h1><br>
+{% for i in m %}
+name  ---- {{i.first_name}}  {{i.last_name}}<br>
+year ---{{i.year}}<br>
+<img src="{{ i.photo.url }}" style="width:100px;height:100px;"><br>
+
+
+{% endfor %}
