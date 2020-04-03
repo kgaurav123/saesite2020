@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from .forms import UserForm, ProfileUpdateForm
 from django.core.files.storage import FileSystemStorage
+from .models import Profile
 
 # Create your views here.
 def index(request):
@@ -58,3 +59,15 @@ def update_profile(request):
 	else:
 		form=ProfileUpdateForm()
 	return render(request,'home/formupdate.html',{'form':form})
+
+def member_list(request):
+	profiles=Profile.objects.filter(department="MANUAL").order_by('-year')
+	m=[]
+	print(profiles)
+	for i in profiles:
+		m.append(i)
+	print(m)
+
+	return render(request,'home/members.html',{'m':m})
+
+
