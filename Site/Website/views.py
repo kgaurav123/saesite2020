@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from .forms import UserForm, ProfileUpdateForm
 from django.core.files.storage import FileSystemStorage
-from .models import Profile
+
 
 # Create your views here.
 def index(request):
