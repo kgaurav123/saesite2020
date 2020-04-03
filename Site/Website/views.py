@@ -14,6 +14,16 @@ def index(request):
 def baja(request):
     return render(request,'home/baja.html')
 
+def events(request):
+	event_list = Event.objects.all()
+	return render(request,'home/events.htm',{'events':event_list})
+
+def event_details(request,pk):
+	pass
+
+def members(request):
+    return render(request,'home/members.html')
+
 def signup(request):
 	if request.method=='POST':
 		form=UserForm(request.POST)
