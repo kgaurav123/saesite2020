@@ -5,3 +5,4 @@ from .models import *
 
 admin.site.register(Member)
 admin.site.register(Event)
+admin.site.register(Profile)
