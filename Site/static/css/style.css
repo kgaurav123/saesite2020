@@ -128,39 +128,22 @@ p {
     font-weight: 300;
 }
 /* ========= About Us ============= */
-.choose-us-wraper {
-
-    padding-top: 50px;
+#ABOUT{
+    padding-top:60px;
+    padding-bottom:60px;
 }
-
-.about-iphone > .about,.us{
-    font-size: 100px;
-    text-align: center;    
+.about{
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight:500;
 }
-
-.choose-us-item {
-    position: relative;
-    padding-bottom: 4px;
-    
-    margin-bottom: 20px;
+.text-muted{
+    color: #6c757d!important;
+    line-height:1.75;
+    box-sizing:border-box;
+    font-size:16px;
 }
-.choose-us-item div {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.choose-us-item div {
-    font-size: 55px;
-    color: #129CF3;
-    transition: all 1s;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    -moz-transition: all 1s;
-}
-.choose-us-item p {
-    color: #727272;
-    font-size: 20px;
-} 
 /* ========= Testimonials ============= */
 .testimonial {
     background-image: url("../images/testimonial-bg.jpg");
@@ -493,7 +476,6 @@ p {
     color: #fff;
     font-size: 25px;
 }
-
 
 
 
