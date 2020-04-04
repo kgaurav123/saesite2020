@@ -7,7 +7,7 @@
 <meta name="description" content="Simple, clean, responsive website built with html5, CSS3, Js, jQuery and Bootstrap">
 <meta name="keywords" content="web, design, html, css, html5, css3, javascript, jquery, bootstrap, development">
 <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
-       
+        
         
 <!-- Google Fonts -->
 <link href='https://fonts.googleapis.com/css?family=Raleway:500italic,600italic,600,700,700italic,300italic,300,400,400italic,800,900' rel='stylesheet' type='text/css'>
@@ -35,7 +35,28 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
 
 <script src="https://kit.fontawesome.com/ca1cdc2614.js" crossorigin="anonymous"></script>
-        
+        <style>
+          .social:link, .social:visited {
+            color: white;
+  background-color: transparent;
+  text-decoration: none;
+
+}
+
+.social:hover, .social:active {
+    color: blue;
+  background-color: transparent;
+  
+}
+.shead{
+     text-align:center;
+     color:white;
+     margin-bottom:30px;
+}
+.footer{
+    padding:20px;
+}
+          </style>
 </head>
 <body>
 
@@ -60,7 +81,7 @@
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse" id="loso-navbar-collapse-1">
 <ul class="nav navbar-nav navbar-right">
-<li><a href="#HOME" class="nav-item">HOME</a></li>
+<li><a href="/" class="nav-item">HOME</a></li>
 <li><a href="#ABOUT" class="nav-item">ABOUT</a></li>
 <li><a href="#FEATURES" class="nav-item">EVENTS</a></li>
 <li><a href="#DOWNLOAD" class="nav-item">BLOG</a></li>
@@ -76,48 +97,37 @@
 {% block body %}
 {% endblock body %}
 <footer class="footer">
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-md-6">
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div id="copyright" style="color: white;margin-bottom: 5%;">
-                            <h2>Contact Us</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="color: white;">
-                    <div class="col-md-3">
-                        <i class="fab fa-facebook-square fa-2x"></i>
-                    </div>
-                    <div class="col-md-3">
-                        <i class="fab fa-instagram fa-2x"></i>
-                    </div>
-                    <div class="col-md-3">
-                        <i class="fas fa-envelope fa-2x"></i>
-                    </div>
-                    <div class="col-md-3">
-                        <i class="fas fa-phone-square fa-2x"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-
-                <div class="scroll-top">
-                    <a href="#HOME" id="scroll-to-top"><i class="fa fa-angle-up"></i></a>
-                </div>
-            </div>
-
-
-        </div>
+<div class="container">
+<div class="row">
+    <h1 class="shead">Contact Us</h1>
+    <div class="col-md-3 mb-2 text-center">
+    <i class="fa fa-map-marker fa-3x mb-3 sr-contact-1" style="color:white"></i>
+    <p style="color:white">
+        NIT Durgapur
+        <br> West Bengal-713209
+    </p>
+    </div>
+    <div class="col-md-3 mb-2 text-center">
+    <i class="fa fa-facebook fa-3x mb-3 sr-contact-2" style="color:white"></i>
+    <p><a class="social" href="https://www.facebook.com/SAENITD/">SAENITD</a></p>
 
     </div>
+    <div class="col-md-3 mb-2 text-center">
+    <i class="fa fa-instagram fa-3x mb-3 sr-contact-2" style="color:white"></i>
+    <p><a class="social" href="https://www.instagram.com/sae_nit_dgp/">SAENITD</a></p>
+    </div>
+    <div class="col-md-3 mb-2 text-center">
+    <i class="fa fa-envelope fa-3x mb-3 sr-contact-3" style="color:white"></i>
+    <p><a class="social" href="mailto:sae.nitdgp1@gmail.com">sae.nitdgp1@gmail.com</a> </p>
+    </div>
+    <div class="col-md-12 mb-2 text-right">
 
-
+        <div class="scroll-top">
+            <a href="#HOME" id="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+        </div>
+    </div>
+</div>
+</div>
 </footer>
 
 <!-- Bootstrap JavaScript -->
