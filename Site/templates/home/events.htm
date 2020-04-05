@@ -30,6 +30,11 @@
 .card button:hover {
   opacity: 0.7;
 }
+
+.btn-details:hover{
+  background-color: black;
+  color: #129CF3;
+}
 </style>
 
 <!-- About Us -->
@@ -52,13 +57,14 @@
                     <img src="{{i.poster.url}}" alt="Denim Jeans" style="width:300px;height:200px;">
                     <h1>{{i.name}}</h1>
                     
-                    <p>{{i.description | truncatechars:80 }} </p> <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    <p>{{i.description | truncatechars:50 }} </p> <p>
+                      <button type="button" class="btn btn-details btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                         Details
                       </button></p>
                   </div>
                 </div>
                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
                           <h1 class="modal-title" id="exampleModalLongTitle" style="margin-bottom: -80px;">{{i.name}}</h1>
@@ -67,7 +73,34 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                          {{i.description}}
+                          <div class="row">
+                            <div class="col-md-12 poster">
+                              <img class="img-responsive" src="{{i.poster.url}}" alt="">
+                            </div>
+                            <div class="col-md-12">
+                              <div class="row" style="margin: 10px 0;"> 
+                                <div class="col-md-4">
+                                  <i class="fas fa-map-marker-alt fa-lg"></i>
+                                  <h4 style="display: inline;"><b>{{i.venue}}</b></h2>
+                                </div>
+                                <div class="col-md-4">
+                                  <i class="far fa-calendar-alt fa-lg"></i>
+                                  <h4 style="display: inline;"><b>{{i.date}}</b></h2>
+                                </div>
+                                <div class="col-md-4">
+                                  <i class="far fa-clock fa-lg"></i>
+                                  <h4 style="display: inline;"><b>{{i.time}}</b></h2>
+                                </div>
+                              </div>
+                              <div class="row" style="margin-top: 5px;">
+                                <div class="col-md-12" style="font-size: 20px;">
+                                  {{i.description}}
+                                  
+                                </div>
+                              </div>
+                        
+                            </div>
+                          </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
