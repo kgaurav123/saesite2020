@@ -31,22 +31,7 @@
   opacity: 0.7;
 }
 </style>
-<div class="header-overlay">
-    <div class="container header-container">
-    <div class="row">
-    <div class="col-md-8">
-    <div class="header-text">
-    <!-- Title & Description -->
-    <h1> SAE</h1>
-    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero eligendi amet dolores at odit, libero similique culpa reprehenderit dolorem dolor, placeat repellat iure officiis earum maxime tempore suscipit, cumque fugit?</p>
-    </div>
-    </div>
-    <div class="col-md-3 col-md-offset-1">
-    </div>
-    </div>                
-    </div>            
-    </div>            
-    </header>
+
 <!-- About Us -->
 <section id="ABOUT">
 <div class="choose-us-wraper">           
@@ -67,13 +52,12 @@
                     <img src="{{i.poster.url}}" alt="Denim Jeans" style="width:300px;height:200px;">
                     <h1>{{i.name}}</h1>
                     
-                    <p>{{i.description | truncatechars:80 }}  <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    <p>{{i.description | truncatechars:80 }} </p> <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                         Details
                       </button></p>
                   </div>
                 </div>
-
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -92,7 +76,7 @@
                       </div>
                     </div>
                   </div>
-
+              
     {% endfor %}
     
 </div>         
