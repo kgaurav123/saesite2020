@@ -1,10 +1,207 @@
+{% extends 'base.html' %}
+{% block body %}
 {% load static %}
-<title>SAE</title>
-<h1>Manual</h1><br>
-{% for i in m %}
-name  ---- {{i.first_name}}  {{i.last_name}}<br>
-year ---{{i.year}}<br>
-<img src="{{ i.photo.url }}" style="width:100px;height:100px;"><br>
+<style>
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.btn-details:hover{
+  background-color: black;
+  color: #129CF3;
+}
+
+.tab > div {
+  text-align: center;
+  height: 50px;
+  cursor: grab;
+  
+  
+}
+.tab > div:hover {
+  box-shadow: 0 2px 3px 2px gray;
+  border-radius: 30px;
+}
+.tab > div:hover p{
+  font-size: 18px;
+}
+.tab > div> p{
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.details > div{
+  display: none;
+}
+</style>
+
+<script>
+  function show(divid){
+    if(divid == 'technical'){
+      document.getElementsByClassName("officebearers").style.display = "none";
+      document.getElementsByClassName("technical").style.display = "block";
+      document.getElementsByClassName("webd").style.display = 'none';
+      document.getElementsByClassName("management").style.display = "none";
+      document.getElementsByClassName("graphics").style.display = "none";
+      document.getElementsByClassName("baja").style.display = "none";
+      
+    }else if(divid == 'webd'){
+      document.getElementsByClassName("officebearers").style.display = "none";
+      document.getElementsByClassName("technical").style.display = "none";
+      document.getElementsByClassName("webd").style.display = block;
+      document.getElementsByClassName("management").style.display = "none";
+      document.getElementsByClassName("graphics").style.display = "none";
+      document.getElementsByClassName("baja").style.display = "none";
+      
+    }else if(divid == 'management'){
+      document.getElementsByClassName("officebearers").style.display = "none";
+      document.getElementsByClassName("technical").style.display = "none";
+      document.getElementsByClassName("webd").style.display = "none";
+      document.getElementsByClassName("management").style.display = "block";
+      document.getElementsByClassName("graphics").style.display = "none";
+      document.getElementsByClassName("baja").style.display = "none";
+      
+    }else if(divid == 'graphics'){
+      document.getElementsByClassName("officebearers").style.display = "none";
+      document.getElementsByClassName("technical").style.display = "none";
+      document.getElementsByClassName("webd").style.display = "none";
+      document.getElementsByClassName("management").style.display = "none";
+      document.getElementsByClassName("graphics").style.display = "block";
+      document.getElementsByClassName("baja").style.display = "none";
+      
+    }else if(divid == 'baja'){
+      document.getElementsByClassName("officebearers").style.display = "none";
+      document.getElementsByClassName("technical").style.display = "none";
+      document.getElementsByClassName("webd").style.display = "none";
+      document.getElementsByClassName("management").style.display = "none";
+      document.getElementsByClassName("graphics").style.display = "none";
+      document.getElementsByClassName("baja").style.display = "block";
+      
+    }
+  }
+</script>
+
+<!-- About Us -->
+<section id="ABOUT">
+<div class="choose-us-wraper">           
+<div class="container">              
+<div class="row">
+
+<div class="col-md-2 " style="text-align: center;margin-bottom: 8%;margin-left: 50%;transform: translateX(-50%);border-bottom: 1px solid #129CF3;;">
+    <h1>MEMBERS</h1>
+</div>
+</div>
+<div class="container-fluid">
+  <div class="row tab">
+    <div class="col-md-2 officebearers" onclick="show('office_bearers')">
+      <p>OFFICE BEARERS</p>
+    </div>
+    
+    <div class="col-md-2 technical" onclick="show('technical')">
+      <p>TECHNICAL</p>
+    </div>
+    <div class="col-md-2 webd" onclick="show('webd')">
+      <p>WEB DEVELOPEMENT</p>
+    </div>
+    <div class="col-md-2 management" onclick="show('management')">
+      <p>MANAGEMENT</p>
+    </div>
+    <div class="col-md-2 graphics" onclick="show('graphics')">
+      <p>GRAPHICS</p>
+    </div>
+    <div class="col-md-2 baja" style="border-right: solid 0px gray;" onclick="show('baja')">
+      <p>TEAM NDORS</p>
+    </div>
+  </div>
+</div>
+<div class="details">
+  <div class="container" id="office_bearers">
+    <h1>office bearers</h1>
+    <div class="row">                        
+      <div class="col-md-12 wow fadeInbottom" data-wow-duration="1s" data-wow-delay=".5s">
+         
+          
+      </div>         
+      </div>
+  </div>
+  
+  <div class="container" id="technical">
+    <h1>Technical</h1>
+    <div class="row">                        
+      <div class="col-md-12 wow fadeInbottom" data-wow-duration="1s" data-wow-delay=".5s">
+         
+          
+      </div>         
+      </div>
+  </div>
+  <div class="container" id="webd">
+    <h1>webd</h1>
+    <div class="row">                        
+      <div class="col-md-12 wow fadeInbottom" data-wow-duration="1s" data-wow-delay=".5s">
+         
+          <!--Print all here-->
+         
+          
+      </div>         
+      </div>
+  </div>
+  <div class="container" id="management">
+    <h1>management</h1>
+    <div class="row">                        
+      <div class="col-md-12 wow fadeInbottom" data-wow-duration="1s" data-wow-delay=".5s">
+        
+          
+      </div>         
+      </div>
+  </div>
+  <div class="container" id="graphics">
+    <h1>graphics</h1>
+    <div class="row">                        
+      <div class="col-md-12 wow fadeInbottom" data-wow-duration="1s" data-wow-delay=".5s">
+         
+          
+      </div>         
+      </div>
+  </div>
+  <div class="container" id="baja">
+    <h1>baja</h1>
+    <div class="row">                        
+      <div class="col-md-12 wow fadeInbottom" data-wow-duration="1s" data-wow-delay=".5s">
+        
+          
+      </div>         
+      </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
 
 
-{% endfor %}
+
+{% endblock body %}
