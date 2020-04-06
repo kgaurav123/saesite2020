@@ -23,8 +23,7 @@ class Profile(models.Model):
     dept_choices = [
         ('OFFICE BEARERS','Office Bearers'),
         ('MANAGEMENT','Management'),
-        ('AUTOMOBILE','Automobile'),
-        ('MANUAL','Manual'),
+        ('TECHNICAL','Technical'),
         ('WEBD','Web Developement'),
         ('GRAPHICS','Graphics and Photography'),
         ('NDORS','NDORS'),
