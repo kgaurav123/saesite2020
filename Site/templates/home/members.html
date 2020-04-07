@@ -1,10 +1,144 @@
+{% extends 'base.html' %}
+{% block body %}
 {% load static %}
-<title>SAE</title>
-<h1>Manual</h1><br>
-{% for i in m %}
-name  ---- {{i.first_name}}  {{i.last_name}}<br>
-year ---{{i.year}}<br>
-<img src="{{ i.photo.url }}" style="width:100px;height:100px;"><br>
+<style>
+  #member{
+    padding-top:100px;
+    overflow: hidden;
+  }
+  #ma,#tech,#webd,#gra,#ndors{
+    display: none;
+  }
+  .show,.show1,.show2,.show3,.show4,.show5{
+    margin: 4vw;
+  }
+</style>
+<script>
+  function myFunction() {
+    document.getElementById("of").style.display = "block";
+    document.getElementById("ma").style.display = "none";
+    document.getElementById("tech").style.display = "none";
+    document.getElementById("webd").style.display = "none";
+    document.getElementById("gra").style.display = "none";
+    document.getElementById("ndors").style.display = "none";
+  }
+  function myFunction1() {
+    document.getElementById("of").style.display = "none";
+    document.getElementById("ma").style.display = "block";
+    document.getElementById("tech").style.display = "none";
+    document.getElementById("webd").style.display = "none";
+    document.getElementById("gra").style.display = "none";
+    document.getElementById("ndors").style.display = "none";
+  }
+  function myFunction2() {
+    document.getElementById("of").style.display = "none";
+    document.getElementById("ma").style.display = "none";
+    document.getElementById("tech").style.display = "block";
+    document.getElementById("webd").style.display = "none";
+    document.getElementById("gra").style.display = "none";
+    document.getElementById("ndors").style.display = "none";
+  }
+  function myFunction3() {
+    document.getElementById("of").style.display = "none";
+    document.getElementById("ma").style.display = "none";
+    document.getElementById("tech").style.display = "none";
+    document.getElementById("webd").style.display = "block";
+    document.getElementById("gra").style.display = "none";
+    document.getElementById("ndors").style.display = "none";
+  }
+  function myFunction4() {
+    document.getElementById("of").style.display = "none";
+    document.getElementById("ma").style.display = "none";
+    document.getElementById("tech").style.display = "none";
+    document.getElementById("webd").style.display = "none";
+    document.getElementById("gra").style.display = "block";
+    document.getElementById("ndors").style.display = "none";
+  }
+  function myFunction5() {
+    document.getElementById("of").style.display = "none";
+    document.getElementById("ma").style.display = "none";
+    document.getElementById("tech").style.display = "none";
+    document.getElementById("webd").style.display = "none";
+    document.getElementById("gra").style.display = "none";
+    document.getElementById("ndors").style.display = "block";
+  }
+  </script>
+  <section id="member">
+  <h2 style="text-align: center;">MEMBER</h2>
+<div class="container">
+  <div class="row">
+    <div class="row" style="padding:1vw;"></div>
+      <div class="col-xs-4 col-md-2" style="padding:1vw;">
+          <a class="btn btn-primary btn-md col" class="show" onclick="myFunction()"><i class="fa fa-users"><h6>Office Bearers</h6></i></a>
+      </div>
+      <div class="col-xs-4 col-md-2" style="padding:1vw;">
+          <a class="btn btn-primary btn-md col" class="show1" onclick="myFunction1()"><i class="fa fa-tasks "><br><h6>Management</h6></i></a>
 
+      </div>
+      <div class="col-xs-4 col-md-2" style="padding:1vw;">
+          <a class="btn btn-primary btn-md col" class="show2" onclick="myFunction2()"><i class="fa fa-cogs "><h6>Technical    </h6></i></a>
+      </div>
+      <div class="col-xs-4 col-md-2" style="padding:1vw;">
+          <a class="btn btn-primary btn-md col" class="show3" onclick="myFunction3()"><i class="fa fa-chrome"><h6>WebD</h6></i></a>
+      </div>
+      <div class="col-xs-4 col-md-2" style="padding:1vw;">
+          <a class="btn btn-primary btn-md col" class="show4" onclick="myFunction4()"><i class="fa fa-pen-nib"><h6>Graphics</h6></i></a>
+      </div>
+      <div class="col-xs-4 col-md-2" style="padding:1vw;">
+          <a class="btn btn-primary btn-md col" class="show5" onclick="myFunction5()"><i class="fa fa-car"><h6>Team NDORS</h6></i></a>
+      </div>
 
-{% endfor %}
+  </div>
+    
+  </div>
+<section id="of">
+  <h1 style="text-align: center;">Office Bearers</h1>
+  <div class="container">
+   <div class="row">
+  
+   </div>
+  </div>
+</section>
+<section id="ma">
+  <h1 style="text-align: center;">Management</h1>
+  <div class="container">
+   <div class="row">
+      
+   </div>
+  </div>
+</section>
+<section id="tech">
+  <h1 style="text-align: center;">Technical</h1>
+  <div class="container">
+   <div class="row">
+      
+   </div>
+  </div>
+</section>
+<section id="webd">
+  <h1 style="text-align: center;">Web Development</h1>
+  <div class="container">
+   <div class="row">
+      
+   </div>
+  </div>
+</section>
+<section id="gra">
+  <h1 style="text-align: center;">Graphics</h1>
+  <div class="container">
+   <div class="row">
+      
+   </div>
+  </div>
+</section>
+<section id="ndors">
+  <h1 style="text-align: center;">Team NDORS</h1>
+  <div class="container">
+   <div class="row">
+      
+   </div>
+  </div>
+</section>
+
+</section>
+{% endblock body %}

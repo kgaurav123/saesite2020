@@ -23,8 +23,7 @@ class Profile(models.Model):
     dept_choices = [
         ('OFFICE BEARERS','Office Bearers'),
         ('MANAGEMENT','Management'),
-        ('AUTOMOBILE','Automobile'),
-        ('MANUAL','Manual'),
+        ('TECHNICAL','Technical'),
         ('WEBD','Web Developement'),
         ('GRAPHICS','Graphics and Photography'),
         ('NDORS','NDORS'),
@@ -54,8 +53,13 @@ def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
 
 class Event(models.Model):
+    event_type = [
+        ('online','ONLINE'),
+        ('offline','OFFLINE')
+    ]
     name = models.CharField(max_length=100)
     description = models.TextField()
+    type_event = models.CharField(max_length = 50,choices=event_type,default='offline')
     venue = models.CharField(max_length = 200)
     date = models.DateField(auto_now=False,auto_now_add=False,blank = True)
     time = models.TimeField(auto_now=False,auto_now_add=False,blank = True)
