@@ -28,12 +28,20 @@ class Profile(models.Model):
         ('GRAPHICS','Graphics and Photography'),
         ('NDORS','NDORS'),
         ]
+    post_choices = [
+        ('PRESIDENT','President'),
+        ('VICE PRESIDENT','Vice President'),
+        ('GENERAL SECRETARY','General Secretary'),
+        ('TREASURER','Treasurer'),
+        ('NONE','None'),
+    ]
 
     
     first_name=models.CharField(max_length=50,null=False)
     last_name = models.CharField(max_length = 50)
     year = models.IntegerField(choices = yr_choices,default=2)
     department = models.CharField(max_length=20,choices = dept_choices,default='FIRST')
+    post = models.CharField(max_length=20,choices = post_choices,default='None')
     fb=models.URLField(null=True, blank=True)
     email=models.EmailField(null=True, blank=True)
     phone=models.CharField(null=True,blank=False, max_length=15)
@@ -42,6 +50,12 @@ class Profile(models.Model):
     def __str__(self):
         #return (self.first_name + self.last_name)
         return (str(self.user))
+
+    def isPostHolder(self):
+        if (self.post == 'NONE'):
+            return 0
+        else:
+            return 1
 
 @receiver(post_save,sender=User)
 
