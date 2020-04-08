@@ -72,21 +72,21 @@ def update_profile(request):
 	return render(request,'home/formupdate.html',{'form':form})
 
 def member_list(request):
-	office_bearers = Profile.objects.filter(year = 4)
+	office_bearers = Profile.objects.filter(year = 4).order_by('post')
 
-	management_final=Profile.objects.filter(department="MANAGEMENT",year=4)
+	management_final=Profile.objects.filter(department="MANAGEMENT",year=4).order_by('post')
 	management_third=Profile.objects.filter(department="MANAGEMENT",year=3)
 	management_second=Profile.objects.filter(department="MANAGEMENT",year=2)
 
-	technical_final=Profile.objects.filter(department="TECHNICAL",year=4)
+	technical_final=Profile.objects.filter(department="TECHNICAL",year=4).order_by('post')
 	technical_third=Profile.objects.filter(department="TECHNICAL",year=3)
 	technical_second=Profile.objects.filter(department="TECHNICAL",year=2)
 
-	webd_final=Profile.objects.filter(department="WEBD",year=4)
+	webd_final=Profile.objects.filter(department="WEBD",year=4).order_by('post')
 	webd_third=Profile.objects.filter(department="WEBD",year=3)
 	webd_second=Profile.objects.filter(department="WEBD",year=2)
 
-	graphics_final=Profile.objects.filter(department="GRAPHICS",year=4)
+	graphics_final=Profile.objects.filter(department="GRAPHICS",year=4).order_by('post')
 	graphics_third=Profile.objects.filter(department="GRAPHICS",year=3)
 	graphics_second=Profile.objects.filter(department="GRAPHICS",year=2)
 
