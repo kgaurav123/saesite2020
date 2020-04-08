@@ -12,6 +12,10 @@
   .show,.show1,.show2,.show3,.show4,.show5{
     margin: 4vw;
   }
+
+  .fab:hover,.fas:hover{
+    color: #129CF3;;
+  }
 </style>
 <script>
   function myFunction() {
@@ -92,23 +96,168 @@
     
   </div>
 <section id="of">
-  <h1 style="text-align: center;">Office Bearers</h1>
+  <h3 style="text-align: center;margin-bottom: 50px;">Office Bearers</h3>
   <div class="container">
    <div class="row">
-  
+      <div class="col-md-12">
+        {%for i in office_bearers%}
+          <div class="col-md-4">
+            <div class="container" style="margin-bottom: 20px;">
+              <div class="card" style="width: 18rem;">
+                <img src="{{i.photo.url}}" class="card-img-top" alt="{{i.first_name|add:' '|add:i.last_name}}" style="height: 200px;width: 200px;border-radius: 5px;">
+                <div class="card-body" >
+                  <h3 class="card-title" style="text-align: center;">{{i.first_name|add:" "|add:i.last_name}}</h3>
+                  {% if i.isPostHolder %}
+                    <h4 style="text-align: center;">{{i.post}}</h4>
+                  {% endif %}
+
+                </div>
+                <div class="card-footer text-muted">
+                  
+                    <div class="row">
+                      <div class="col-md-4" style="text-align: center;">
+                        <i class="fab fa-facebook-f fa-x"><a href="{{i.fb}}"></a></i>
+                      </div>
+                      <div class="col-md-4" style="text-align: center;">
+                        <i class="fas fa-phone fa-x" onclick="alert('Phone Number: '+ {{i.phone}})"></i>
+                      </div>
+                      <div class="col-md-4" style="text-align: center;">
+                        <a href="{{'mailto: '|add:i.email}}"><i class="fas fa-at fa-x"></i></a>
+                      </div>
+                    </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
    </div>
   </div>
 </section>
 <section id="ma">
-  <h1 style="text-align: center;">Management</h1>
+  <h3 style="text-align: center;">Management</h3>
   <div class="container">
    <div class="row">
-      
+    <h3 style="text-align: center;margin-bottom: 50px;">FINAL YEAR</h3>
+    <div class="container">
+     <div class="row">
+        <div class="col-md-12">
+          {%for i in management_final%}
+            <div class="col-md-4">
+              <div class="container" style="margin-bottom: 20px;">
+                <div class="card" style="width: 18rem;">
+                  <img src="{{i.photo.url}}" class="card-img-top" alt="{{i.first_name|add:' '|add:i.last_name}}" style="height: 200px;width: 200px;border-radius: 5px;">
+                  <div class="card-body" >
+                    <h3 class="card-title" style="text-align: center;">{{i.first_name|add:" "|add:i.last_name}}</h3>
+                    {% if i.isPostHolder %}
+                      <h4 style="text-align: center;">{{i.post}}</h4>
+                    {% endif %}
+  
+                  </div>
+                  <div class="card-footer text-muted">
+                    
+                      <div class="row">
+                        <div class="col-md-4" style="text-align: center;">
+                          <i class="fab fa-facebook-f fa-x"><a href="{{i.fb}}"></a></i>
+                        </div>
+                        <div class="col-md-4" style="text-align: center;">
+                          <i class="fas fa-phone fa-x" onclick="alert('Phone Number: '+ {{i.phone}})"></i>
+                        </div>
+                        <div class="col-md-4" style="text-align: center;">
+                          <a href="{{'mailto: '|add:i.email}}"><i class="fas fa-at fa-x"></i></a>
+                        </div>
+                      </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+     </div>
+    </div>
    </div>
+   <h3 style="text-align: center;margin-bottom: 50px;">THIRD YEARS</h3>
+  <div class="container">
+   <div class="row">
+      <div class="col-md-12">
+        {%for i in management_third%}
+          <div class="col-md-4">
+            <div class="container" style="margin-bottom: 20px;">
+              <div class="card" style="width: 18rem;">
+                <img src="{{i.photo.url}}" class="card-img-top" alt="{{i.first_name|add:' '|add:i.last_name}}" style="height: 200px;width: 200px;border-radius: 5px;">
+                <div class="card-body" >
+                  <h3 class="card-title" style="text-align: center;">{{i.first_name|add:" "|add:i.last_name}}</h3>
+                  {% if i.isPostHolder %}
+                    <h4 style="text-align: center;">{{i.post}}</h4>
+                  {% endif %}
+
+                </div>
+                <div class="card-footer text-muted">
+                  
+                    <div class="row">
+                      <div class="col-md-4" style="text-align: center;">
+                        <i class="fab fa-facebook-f fa-x"><a href="{{i.fb}}"></a></i>
+                      </div>
+                      <div class="col-md-4" style="text-align: center;">
+                        <i class="fas fa-phone fa-x" onclick="alert('Phone Number: '+ {{i.phone}})"></i>
+                      </div>
+                      <div class="col-md-4" style="text-align: center;">
+                        <a href="{{'mailto: '|add:i.email}}"><i class="fas fa-at fa-x"></i></a>
+                      </div>
+                    </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+   </div>
+  </div>
+  <h3 style="text-align: center;margin-bottom: 50px;">SECOND YEARS</h3>
+  <div class="container">
+   <div class="row">
+      <div class="col-md-12">
+        {%for i in management_second%}
+          <div class="col-md-4">
+            <div class="container" style="margin-bottom: 20px;">
+              <div class="card" style="width: 18rem;">
+                <img src="{{i.photo.url}}" class="card-img-top" alt="{{i.first_name|add:' '|add:i.last_name}}" style="height: 200px;width: 200px;border-radius: 5px;">
+                <div class="card-body" >
+                  <h3 class="card-title" style="text-align: center;">{{i.first_name|add:" "|add:i.last_name}}</h3>
+                  {% if i.isPostHolder %}
+                    <h4 style="text-align: center;">{{i.post}}</h4>
+                  {% endif %}
+
+                </div>
+                <div class="card-footer text-muted">
+                  
+                    <div class="row">
+                      <div class="col-md-4" style="text-align: center;">
+                        <i class="fab fa-facebook-f fa-x"><a href="{{i.fb}}"></a></i>
+                      </div>
+                      <div class="col-md-4" style="text-align: center;">
+                        <i class="fas fa-phone fa-x" onclick="alert('Phone Number: '+ {{i.phone}})"></i>
+                      </div>
+                      <div class="col-md-4" style="text-align: center;">
+                        <a href="{{'mailto: '|add:i.email}}"><i class="fas fa-at fa-x"></i></a>
+                      </div>
+                    </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+   </div>
+  </div>
   </div>
 </section>
 <section id="tech">
-  <h1 style="text-align: center;">Technical</h1>
+  <h3 style="text-align: center;">Technical</h3>
   <div class="container">
    <div class="row">
       
@@ -116,7 +265,7 @@
   </div>
 </section>
 <section id="webd">
-  <h1 style="text-align: center;">Web Development</h1>
+  <h3 style="text-align: center;">Web Development</h3>
   <div class="container">
    <div class="row">
       
@@ -124,7 +273,7 @@
   </div>
 </section>
 <section id="gra">
-  <h1 style="text-align: center;">Graphics</h1>
+  <h3 style="text-align: center;">Graphics</h3>
   <div class="container">
    <div class="row">
       
@@ -132,7 +281,7 @@
   </div>
 </section>
 <section id="ndors">
-  <h1 style="text-align: center;">Team NDORS</h1>
+  <h3 style="text-align: center;">Team NDORS</h3>
   <div class="container">
    <div class="row">
       
