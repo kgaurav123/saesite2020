@@ -43,11 +43,6 @@
   text-decoration: none;
 
 }
-#saelogo{
-    height:200px;
-    width:auto;
-    margin-left:-10%;
-}
 
 .social:hover, .social:active {
     color: blue;
@@ -72,7 +67,6 @@
 <nav class="navbar navbar-default navbar-fixed-top">
 <div class="container">
 <!-- Brand and toggle get grouped for better mobile display -->
-
 <div class="navbar-header">
 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#loso-navbar-collapse-1" aria-expanded="false">
 <span class="sr-only">Toggle navigation</span>
@@ -82,15 +76,11 @@
 </button>
 <a class="navbar-brand" href="#">
 <!-- small size logo -->
-
-<img id="saelogo" src={% static 'images/saelogo.png'%}>
+<h3>SAE-brand-holder</h3>
 </a>
 </div>
-
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse" id="loso-navbar-collapse-1">
-
-
 <ul class="nav navbar-nav navbar-right">
 <li><a href="/" class="nav-item">HOME</a></li>
 <li><a href="#ABOUT" class="nav-item">ABOUT</a></li>
@@ -105,7 +95,6 @@
 </div>
 <!-- /.container-fluid -->
 </nav>
-
 </header>
 
 {% block body %}
