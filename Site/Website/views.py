@@ -96,7 +96,7 @@ def member_list(request):
 	
 
 	return render(request,'home/members.html',{'office_bearers':office_bearers,'management_final':management_final,
-	'management_third':management_third,'management_second':management_third,'technical_final':technical_final,
+	'management_third':management_third,'management_second':management_second,'technical_final':technical_final,
 	'technical_third':technical_third,'technical_second':technical_second,'webd_final':webd_final,'webd_third':webd_third,
 	'webd_second':webd_second,'graphics_final':graphics_final,'graphics_third':graphics_third,'graphics_second':graphics_second,
 	'baja_final':baja_final,'baja_third':baja_third,'baja_second':baja_second})

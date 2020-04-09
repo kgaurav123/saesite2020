@@ -86,7 +86,7 @@ p {
 
 /* =========== Header ============ */
 .header {
-    animation:slide 15s infinite; 
+    animation:slide 30s infinite; 
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -97,15 +97,24 @@ p {
     
 }
  @keyframes slide{
-          0%{
-              background-image:url("../images/header-bg.jpg");
-          }
-          50%{
-              background-image:url('https://mdbootstrap.com/img/Photos/Slides/img%20(52).jpg');
-          }
-          100%{
-              background-image:url('https://mdbootstrap.com/img/Photos/Slides/img%20(53).jpg');
-          }
+    100%,0%{
+        background-image:url("../images/web.jpg");
+    }
+    17%{
+        background-image:url("../images/2.jpg");
+    }
+    34%{
+        background-image:url("../images/3.jpg");
+    }
+    51%{
+        background-image:url("../images/4.jpg");
+    }
+    68%{
+        background-image:url("../images/5.jpg");
+    }
+    85%{
+        background-image:url("../images/6.jpg");
+    }
       }
 .header-overlay {
     background-color: rgba(31, 31, 31, 0.75);
@@ -128,42 +137,25 @@ p {
     font-weight: 300;
 }
 /* ========= About Us ============= */
-.choose-us-wraper {
-
-    padding-top: 50px;
+#ABOUT{
+    padding-top:60px;
+    padding-bottom:60px;
 }
-
-.about-iphone > .about,.us{
-    font-size: 100px;
-    text-align: center;    
+.about{
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight:500;
 }
-
-.choose-us-item {
-    position: relative;
-    padding-bottom: 4px;
-    
-    margin-bottom: 20px;
+.text-muted{
+    color: #6c757d!important;
+    line-height:1.75;
+    box-sizing:border-box;
+    font-size:16px;
 }
-.choose-us-item div {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.choose-us-item div {
-    font-size: 55px;
-    color: #129CF3;
-    transition: all 1s;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    -moz-transition: all 1s;
-}
-.choose-us-item p {
-    color: #727272;
-    font-size: 20px;
-} 
 /* ========= Testimonials ============= */
 .testimonial {
-    background-image: url("../images/testimonial-bg.jpg");
+    background-image: url("../images/testimonial.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -174,14 +166,14 @@ p {
 }
 .testimonial-overlay {
     background-color: rgba(31, 31, 31, .75);
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .carousel-indicators {
     bottom: -10px;
 }
 .carousel-inner .item img {
-    border: 2px solid #129CF3;
+    border: 1px solid #129CF3;
     border-radius: 50%;
     padding: 3px;
 }
@@ -191,7 +183,7 @@ p {
 .testimonial-caption h2 {
     color: #129CF3;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 30px;
     margin-top: 25px;
     
@@ -203,16 +195,13 @@ p {
 .testimonial-caption h4 span {
     
     color: #D8D8D8;
-    font-style: italic;
+   
     font-weight: 300;
     
 }
-
-.testimonial-caption p {
-    color: #D8D8D8;
-    font-size: 18px;
-    line-height: 27px;
-    padding-top: 50px;
+.center-block{
+    height: 200px!important;
+    width: 200px!important;
 }
 /* ========= Features ============= */
 .features-inner-wrapper {
@@ -363,13 +352,22 @@ p {
 }
 
 /*-----BAJA-----*/
-#carbaja{
-    height:200px;
-    width: 400px;
-     margin-left: 50%;
-     transform: translateX(-50%);
+
+@media(max-width:767px){
+    #carbaja{
+     height:150px;
+     width:250px;
+    }
+}
+@media(min-width:768px){
+    #carbaja{
+     height:200px;
+     width:400px;
+    }
 }
 /* ========= Download Now ============= */
+
+
 .download-now img {
     width: 100%;
 }
@@ -444,101 +442,11 @@ p {
 .available-on-item:hover div.available-on-inner {
     opacity: 1;
 }
-/* ========= Contact Us ============= */
-.contact-us-form .form-control {
-    display: block;
-    width: 100%;
-    height: 50px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 21px;
-    color: #555;
-    background-color: transparent;
-    border: 1px solid #aeaeae;
-    border-radius: 3px;
-    margin-bottom: 15px;
-    opacity: .8;
-    outline: 0px !important;
-    transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-    -webkit-transition: all 1s;
-    
-}
-#message {
-    height: 117px;
-    resize: none;
-}
-.submit-btn,
-.submit-btn:active,
-.submit-btn:focus,
-.submit-btn:visited {
-    
-    background-color: transparent;
-    border: 1px solid #129CF3;
-    border-radius: 4px;
-    width: 100%;
-    height: 50px;
-    text-transform: uppercase;
-    font-size: 18px;
-    color: #129CF3;
-    outline: 0px !important;
-    transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-    -webkit-transition: all 1s;
-}
-.submit-btn:hover {
-    background: #129CF3;
-    color: #fff;
-    border-color: #129CF3;
-}
-.social-icons {
-    padding-top: 50px;
-    padding-bottom: 70px;
-    
-}
-.social-icons ul {
-    margin:0;
-    padding: 0;
-    text-align: center;
-    
-}
-.social-icons ul li { 
-    list-style: none;
-    display: inline;
-    padding-left: 10px;
-}
-
-.social-icons ul li a {
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    border: 1px solid #9d9d9d;
-    border-radius: 3px;
-    width: 45px;
-    height: 45px;
-    line-height: 49px;
-    color: #9d9d9d;
-     transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-    -webkit-transition: all 1s;
-    
-}
-.social-icons ul li a:hover {
-    
-    background-color: #129CF3;
-    border: 1px solid #129CF3;
-    color: #fff;
-} 
-.social-icons ul li a i {
-    font-size: 20px;
-}
 
 
 /* ========= Footer ============= */
 .footer {
+    
     background-color: #1a1a1a;
     padding-bottom: 35px;
     padding-top: 35px;
@@ -547,6 +455,12 @@ p {
 #copyright {
     width: 50%;
 }
+#copyright h2 {
+    color: rgb(253, 250, 246);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 #copyright p {
     color: #8C8B8A;
     font-weight: 600;
@@ -568,7 +482,6 @@ p {
     color: #fff;
     font-size: 25px;
 }
-
 
 
 
