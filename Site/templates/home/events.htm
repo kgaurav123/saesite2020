@@ -48,7 +48,7 @@
                   
                 
                   <div class="card">
-                    <img src="{{i.poster.url}}" alt="Denim Jeans" style="width:300px;height:200px;">
+                    <img src="{{i.poster.url}}" alt="{{i.name}}" style="width:300px;height:200px;">
                     <h3>{{i.name}}</h3>
 
                     <p>{{i.description | truncatechars:80 }}  <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
@@ -70,7 +70,7 @@
                         <div class="modal-body">
                           <div class="row">
                             <div class="col-md-12 poster">
-                              <img class="img-responsive" src="{{i.poster.url}}" alt="">
+                              <img class="img-responsive" src="{{i.poster.url}}" alt="{{i.name}}">
                             </div>
                             <div class="col-md-12">
                               <div class="row" style="margin: 10px 0;"> 
