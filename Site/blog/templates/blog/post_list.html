@@ -1,0 +1,15 @@
+{% extends 'base1.html' %}
+
+{% block body %}
+
+{% for i in posts %}
+<h1>THE POSTS ARE </h1><br>
+
+<h3>USER IS ---{{i.author}}</h3><br>
+	<a href="{% url 'post_details' i.id%}" >{{i.title}}</a><br>
+	{{i.content}}<br>
+	<img src="{{ i.image.url }}" style="width:300px;height:300px;">
+
+{% endfor %}
+
+{% endblock body %}

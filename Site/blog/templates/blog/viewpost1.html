@@ -1,0 +1,21 @@
+{%extends 'base1.html' %}
+
+{% block body %}
+<br>
+Titile ---{{posts.title}}
+<br>
+{{posts.content}}<br>
+
+<img src="{{ posts.image.url }}" style="width:300px;height:300px;"><br>
+<h5>comments</h5>
+{% for i in co %}
+{{i.text}}  {{i.user}}  {{i.date}}<br>
+{%endfor%}
+<br>
+
+<a class="btn btn-outline-danger" href="{% url 'likes' posts.id %}">Likes</button></a> -{{number_likes}}<br>
+<a class="btn btn-outline-danger" href="{% url 'create_comment' posts.id %}">Comment</button></a>
+
+<a class="btn btn-outline-danger" href="{% url 'confirm_delete' posts.id %}">Delete</button></a>
+
+{%endblock body %}
