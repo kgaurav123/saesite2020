@@ -2,7 +2,7 @@
 {% block body %}
 {% load static %}
 <style>
-    .card {
+  .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
@@ -30,11 +30,6 @@
 .card button:hover {
   opacity: 0.7;
 }
-
-.btn-details:hover{
-  background-color: black;
-  color: #129CF3;
-}
 </style>
 
 <!-- About Us -->
@@ -47,22 +42,22 @@
     <h1>EVENTS</h1>
 </div>
 </div>
-<div class="row">                        
-<div class="col-md-12 wow fadeInbottom" data-wow-duration="1s" data-wow-delay=".5s">
+<div class="row wow fadeInbottom" data-wow-duration="1s" data-wow-delay=".5s">
     {% for i in events%}
                 <div class="col-md-4">
                   
                 
-                <div class="card">
-                    <img src="{{i.poster.url}}" alt="Denim Jeans" style="width:300px;height:200px;">
-                    <h1>{{i.name}}</h1>
-                    
-                    <p>{{i.description | truncatechars:50 }} </p> <p>
-                      <button type="button" class="btn btn-details btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                  <div class="card">
+                    <img src="{{i.poster.url}}" alt="{{i.name}}" style="width:300px;height:200px;">
+                    <h3>{{i.name}}</h3>
+
+                    <p>{{i.description | truncatechars:80 }}  <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
                         Details
                       </button></p>
                   </div>
                 </div>
+                
+
                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                       <div class="modal-content">
@@ -75,7 +70,7 @@
                         <div class="modal-body">
                           <div class="row">
                             <div class="col-md-12 poster">
-                              <img class="img-responsive" src="{{i.poster.url}}" alt="">
+                              <img class="img-responsive" src="{{i.poster.url}}" alt="{{i.name}}">
                             </div>
                             <div class="col-md-12">
                               <div class="row" style="margin: 10px 0;"> 
