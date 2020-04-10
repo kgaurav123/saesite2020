@@ -78,8 +78,7 @@ class Event(models.Model):
     date = models.DateField(auto_now=False,auto_now_add=False,blank = True)
     time = models.TimeField(auto_now=False,auto_now_add=False,blank = True)
     poster = models.ImageField(null=True, blank=False,upload_to='event_poster',height_field=None, width_field=None)
-    def __str__(self):
-        return self.name
+    
 
     
 
