@@ -33,6 +33,19 @@ class Profile(models.Model):
         ('VICE PRESIDENT','Vice President'),
         ('GENERAL SECRETARY','General Secretary'),
         ('TREASURER','Treasurer'),
+        ('CONVENER','Convener'),
+        ('TECH HEAD','Tech Head'),
+        ('DESIGN HEAD','Design Head'),
+        ('WEBD','web D'),
+        ('PUBLICITY HEAD','Publicity Head'),
+        ('CREATIVE HEAD','Creative Head'),
+        ('SPONSORSHIP HEAD','Sponsorship Head'),
+        ('ACCOMODATION,TRAVEL AND HOSPITALITY HEAD','Accomodation,travel and Hospitality Head'),
+        ('BAJA COORDINATOR','Baja coordinator'),
+        ('WORKSHOP HEAD','Workshop Head'),
+        ('EVENTS HEAD','Events Head'),
+        ('EVENTS AND FEST COORDINATOR','Events and Fest coordinator'),
+        ('LOGISTIC HEAD','Logistic Head'),
         ('NONE','None'),
     ]
 
@@ -41,7 +54,7 @@ class Profile(models.Model):
     last_name = models.CharField(max_length = 50)
     year = models.IntegerField(choices = yr_choices,default=2)
     department = models.CharField(max_length=20,choices = dept_choices,default='FIRST')
-    post = models.CharField(max_length=20,choices = post_choices,default='None')
+    post = models.CharField(max_length=40,choices = post_choices,default='None')
     fb=models.URLField(null=True, blank=True)
     email=models.EmailField(null=True, blank=True)
     phone=models.CharField(null=True,blank=False, max_length=15)
