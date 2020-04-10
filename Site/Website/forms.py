@@ -21,5 +21,6 @@ class ProfileUpdateForm(ModelForm):
 				'email',
 				'phone',
 				'photo',
+				'post',
 				]
 		
