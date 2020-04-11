@@ -7,7 +7,8 @@ from django.core.files.storage import FileSystemStorage
 from .models import *
 
 def home(request):
-	return render(request,'blog/home.html')
+	posts = Posts.objects.all()
+	return render(request,'blog/home.html',{'posts':posts})
 
 
 def signup(request):
@@ -83,7 +84,7 @@ def create_post(request):
 @login_required
 def post_details(request,key):
 	posts=Posts.objects.get(id=key)
-	comments=Comment.objects.filter(posts=posts).order_by('date')
+	comments=Comment.objects.filter(posts=posts).order_by('-date')
 	co=[]
 	for i in comments:
 		co.append(i)

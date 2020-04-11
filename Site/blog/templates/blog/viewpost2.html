@@ -1,21 +1,62 @@
 {%extends 'base1.html' %}
-
+{%load static%}
 {% block body %}
-<br>
-title---{{posts.title}}
-<br>
-{{posts.content}}<br>
 
-<img src="{{ posts.image.url }}" style="width:300px;height:300px;"><br>
-<h5>comments</h5>
-{% for i in co %}
-{{i.text}}  {{i.user}}  {{i.date}}<br>
-{%endfor%}
-<br>
-
-<a class="btn btn-outline-danger" href="{% url 'likes' posts.id %}">Likes</button></a> -{{number_likes}}<br>
-<a class="btn btn-outline-danger" href="{% url 'create_comment' posts.id %}">Comment</button></a>
-
-
-
-{%endblock body %}
+    <!-- About Us -->
+<section id="ABOUT" >
+    <div class="choose-us-wraper">           
+    <div class="container">              
+    <div class="row">
+    
+    <div class="col-md-12" style="text-align: center;margin-bottom: 2%;">
+        <h1 style="margin-top: 5%;">{{posts.title}}</h1>
+        <h3><i>Contributed by {{posts.author}}</i></h3>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row wow fadeInbottom col-md-10" data-wow-duration="1s" data-wow-delay=".5s">
+            <div class="row">
+                
+                <img src="{{posts.image.url}}" alt="" class="image-fluid" style="width: 100%;" >
+                
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="font-size: 20px;margin: 50px 0;"  >
+                    {{posts.content}}
+                </div>
+            </div>
+            <div class="row" style="text-align: center;">
+                <span>
+                    <a href="{% url 'likes' posts.id %}"><i class="fas fa-thumbs-up fa-2x"></i></a>
+                <span>
+                <span style="font-size: 20px;margin-left: 5px;margin-right: 20px;">
+                    {{number_likes}}
+                </span>
+                <span>
+                    <a href="{% url 'create_comment' posts.id%}"><i class="far fa-comment-alt fa-2x">    Comment</i></a>
+                <span>
+            </div>
+            <div class="row">
+                <h3 style="margin-left: 16px;">Comments</h3>
+                {% for comment in co%}
+                    <div class="col-md-12">
+                        <div class="card border-secondary mb-3" style="border-bottom: 1px solid rgba(0, 0, 0, 0.267);">
+                            
+                            <div class="card-body">
+                                <p class="card-text" style="font-size: 30px;">{{comment.text}}</p>
+                                <div class="card-header">
+                                    Commented by: <b>{{comment.author}}</b>
+                                  </div>
+                              <footer class="blockquote-footer">Posted     <cite title="Source Title">{{comment.date}}</cite></footer>
+                            </div>
+                          </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>  
+    </div>       
+    </div>
+    </div>
+    </div>
+    </section>
+{% endblock body %}
