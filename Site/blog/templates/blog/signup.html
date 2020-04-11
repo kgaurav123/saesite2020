@@ -1,0 +1,17 @@
+<html>
+<title>SAE</title>
+{% load static %}
+
+
+<body>
+{% csrf_token %}
+<div class='container'>
+<form method="post" action="">
+	{% csrf_token %}
+	{{form.as_p}}
+	<input type="submit">
+</form>
+
+</div>
+</body>
+</html>

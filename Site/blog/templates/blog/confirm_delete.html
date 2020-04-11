@@ -1,0 +1,13 @@
+{% extends 'base1.html' %}
+
+{% block body %}
+	<form method="POST">
+		{% csrf_token %}
+	<h2>Do u want to delete This post</h2>
+
+        <a class="btn btn-outline-danger" href="{% url 'post_delete' posts.id %}">Delete</button></a>
+        <a class="btn btn-outline-danger" href="{% url 'post_details' posts.id %}">Cancel</a>
+	 </form>
+
+
+{% endblock body %}
