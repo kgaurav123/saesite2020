@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<header class="header">
+      <div class="header-overlay">
+    <div class="container header-container">
+    <div class="row">
+    <div class="col-md-8">
+    <div class="header-text">
+    <!-- Title & Description -->
+    <h1> SAE</h1>
+    <p> SAEINDIA is India's leading resource for mobility technology. It is a strategic alliance partner of SAE International registered in India as an Indian nonprofit engineering and scientific society dedicated to the advancement of mobility industry in India.</p>
+    </div>
+    </div>
+    <div class="col-md-3 col-md-offset-1">
+    </div>
+    </div>                
+    </div>            
+    </div>            
+    </header>
+<!-- About Us -->
+<section id="ABOUT">
+    <div class="choose-us-wraper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about-iphone wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">                     
+
+                <h1 class="about" style="text-align: center;">
+                    ABOUT US
+                </h1>
+                </div>
+                
+            <div class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">   
+                <p class="text-muted"><b>SAEINDIA</b> is India's leading resource for mobility technology. It is a strategic alliance partner of SAE International registered in India as an Indian nonprofit engineering and scientific society dedicated to the advancement of mobility
+                    industry in India.
+                    <br><b>SAE India collegiate chapter of NIT Durgapur</b> was conceived in 2007 with an idea to integrate the students of the college into international fabric of automobile engineering. Presently 200 students are enjoying the benefits of SAE
+                    India membership. We organize a number of innovative events, workshops and lectures round the year and a competitive place where the sharpest minds battle in the quest to achieve disctinction. SAE along with MNTC and GLUG organises <b>Aavishkar - The TechFest</b>            which is the official technical fest of NIT Durgapur. SAE NIT Durgapur also publishes its annual magazine called <b>Autopia</b> for automobile enthusiasts to know about latest technologies at one place. <b>BAJA SAE</b> is a part of SAE NIT
+                    Durgapur which takes part in BAJA competition organised by SAE India. They represent NIT Durgapur at this national level competition under the team name NDORS.</p>                              
+                   
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" style="margin-top: 10px;">
+            <div class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">                     
+
+            <h1 class="about" style="text-align: center;">
+                SAEINDIA Membership
+            </h1>
+            </div>
+            
+            <div class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">   
+            <p class="text-muted"><b>SAEINDIA</b> is one of the few professional engineering societies whose membership represents practically every engineering and scientific discipline. Its members combine their specialized abilities to further advance the research, development, design, manufacture and utilization of vehicles which operate on land and water and in air and space. Be a part of the SAE family by becoming a member and enjoy the following benefits:
+                    <ul>
+                        <li>
+                            <p class="text-muted">  Members receive free registration at SAEINDIA's lecture meetings and exhibits. This unique benefit puts the members in touch with other professional engineers and suppliers who determine the future of the expanding mobility industry worldwide.
+                            </p></li>
+                        <li><p class="text-muted">Members can purchase SAEINDIA and SAE International technical papers and publications at member discount prices.</li>
+                        </p><li><p class="text-muted">Access vital high-tech mobility information through renewal registration fee for attending SAEINDIA National and International Congress.
+                        </p>
+                        </li>
+                    </ul></p>   
+
+                    
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonial" id="CONTACT">
+<div class="testimonial-overlay">
+<div class="container">
+<div class="row">
+<div class="col-md-12 wow bounceInDown">
+<div id="carousel-testimonial" class="carousel slide" data-ride="carousel">
+<!-- indicators -->
+<ol class="carousel-indicators">
+<li data-target="#carousel-testimonial" data-slide-to="0" class="active"></li>
+<li data-target="#carousel-testimonial" data-slide-to="1"></li>
+<li data-target="#carousel-testimonial" data-slide-to="2"></li>
+<li data-target="#carousel-testimonial" data-slide-to="3"></li>
+
+</ol>
+<!-- wrapper for slides -->
+<div class="carousel-inner">
+<!-- item 01 -->
+<div class="item active text-center">
+<img src="{% static 'images/dibyadipta.jpg' %}" alt="testimonial" class="center-block">
+<div class="testimonial-caption">
+<h2>Dibyadipta Roy</h2>
+<h4><span> Presi </span>dent</h4>
+</div>
+</div>
+<!-- item 02 -->
+<div class="item text-center">
+<img src="{% static 'images/shashank.jpeg' %%}" alt="testimonial" class="center-block">
+<div class="testimonial-caption">
+<h2>Shashank Nayak</h2>
+<h4><span> General </span>Secretary</h4>
+</div>
+</div>
+<!-- item 03 -->
+<div class="item text-center">
+<img src="{% static 'images/anuska.jpg' %}" alt="testimonial" class="center-block">
+<div class="testimonial-caption">
+<h2>Anushka Mondal</h2>
+<h4><span> Conv </span>ener</h4>
+</div>                  
+</div>
+<!-- item 04 -->
+<div class="item text-center">
+<img src="{% static 'images/partha.jpg' %}" alt="testimonial" class="center-block">
+<div class="testimonial-caption">
+<h2>Partha Sarathi Ghosh</h2>
+<h4><span> Treas </span>urer</h4>
+</div>
+</div>
+</div>                                
+</div>
+</div>     
+</div> 
+<div class="row">
+    <div class="col-md-12">
+        <button type="button" class="btn btn-outline-primary" style="margin-left: 50%;transform: translateX(-50%);border: 1px solid #129CF3;text-decoration: none;margin-top: 10px;font-weight: bold;"><a href="{%url 'member_list'%}"> MEET THEM ALL</a></button>
+    </div>
+</div>
+</div>            
+</div>
+</section>
+
+<!-- Features -->
+<section class="features" id="FEATURES">
+<div class="container">
+<div class="row">                                
+<div class="col-md-10 col-md-offset-1">                    
+<div class="section-title wow fadeIn" data-wow-duration="1s">                        
+<h2> EVENTS </h2>                           
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+<button type="button" class="btn btn-outline-primary" style="border: 1px solid #129CF3;text-decoration: none;"><a href="{% url 'events'%}"> SEE MORE</a></button>
+</div>                   
+</div>
+</div>
+</div>
+
+<!-- Counters -->
+<section class="counter">
+<div class="counter-overlay">
+<div class="container wow bounceInLeft" data-wow-duration="1s">
+<div class="row text-center">
+<div class=" col-sm-6 col-md-3">
+<div class="counter-item">
+<div><i class="fa fa-cloud-download"></i></div>
+<h2><span class="counter-num"> 1588 </span><span>+</span></h2>
+<p>FESTS</p>
+</div>
+</div>
+<div class="col-sm-6 col-md-3 ">
+<div class="counter-item">
+<div><i class="fa fa-gift"></i></div>
+<h2><span class="counter-num"> 3500 </span><span>+</span></h2>
+<p>EVENTS</p>
+</div>
+</div>
+<div class=" col-sm-6 col-md-3">
+<div class="counter-item">
+<div><i class="fa fa-check"></i></div>
+<h2><span class="counter-num"> 1066 </span><span>+</span></h2>
+<p>MEMBERS</p>
+</div>                  
+</div>
+<div class=" col-sm-6 col-md-3 ">
+<div class="counter-item"> 
+<div><i class="fa fa-heart-o"></i></div>
+<h2><span class="counter-num"> 199 </span><span>+</span></h2>
+<p>LIKES</p>
+</div>
+</div>                  
+</div>
+</div>        
+</div>
+</section>
+        
+<!-- Screens -->
+<section class="screens" id="SCREENS">
+<div class="container">
+<div class="row">
+<div class="col-md-10 col-md-offset-1">
+<div class="section-title">
+<h2> SAE BAJA</h2>
+<p>Mauris a mauris feugiat, luctus mauris a, sollicitudin ex. Pellentesque et tortor in risus elementum aliquet. Etiam facilisis justo urna, id feugiat magna scelerisque non.
+</p>
+<button type="button" class="btn btn-outline-primary" style="border: 1px solid #129CF3;text-decoration: none;"><a href="{% url 'baja'%}"> LEARN MORE</a></button>
+<div class="screen-slider wow fadeInUp data-wow-duration="1s">
+<!--PUT EVERYTHING HERE FOR AN ANIMATION-->
+<img src="{% static 'images/car.png'%}" id="carbaja" alt="">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+ <!-- Download Now -->
+ <section class="download-now" id="DOWNLOAD">
+<div class="container">
+<div class="row">
+<div class="col-md-10 col-md-offset-1">
+<div class="section-title">
+<h2> BLOG</h2>
+<p>Vestibulum congue eros ac neque dignissim, vel imperdiet neque consectetur. Maecenas condimentum cursus maximus. Praesent eu diam efficitur</p>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row" style="margin-bottom: 10%;">
+<div class="col-md-6 wow fadeInUp" data-wow-duration="1s">
+<!--Put here something for a fadeinup animation-->
+<div class="image-blog">
+<img src="{% static 'images/blogging.png' %}" alt="">
+</div>
+ </div>
+<div class="col-md-4 wow fadeInLeft blog-text" data-wow-duration="1s" style="padding-top: 50px;font-size: 22px;">
+<!--Put here something for a fadeinup animation-->
+<h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi similique hic facere velit molestias tenetur quidem nam sint? Adipisci in neque architecto molestias, optio suscipit numquam consequatur sunt commodi! Ipsa, sapiente veniam voluptate accusantium atque soluta. Cumque iusto ipsam sequi doloremque laborum id ipsum sapiente accusantium obcaecati molestias quisquam, illo amet repellendus eum esse modi quia cum. Repudiandae, excepturi porro.</p>
+<button type="button" class="btn btn-outline-primary" style="margin-left: 50%;transform: translateX(-50%);border: 1px solid #129CF3;text-decoration: none;"><a href="#"> LEARN MORE</a></button>    
+</div>
+</div>
+</div>
+</section>
+
+
+
+{% endblock body %}
