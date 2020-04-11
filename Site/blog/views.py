@@ -7,7 +7,7 @@ from django.core.files.storage import FileSystemStorage
 from .models import *
 
 def home(request):
-	posts = Posts.objects.all()
+	posts = Posts.objects.order_by('-date_posted')
 	return render(request,'blog/home.html',{'posts':posts})
 
 
@@ -33,7 +33,7 @@ def login_view(request):
 		if user is not None:
 			if user.is_active:
 				login(request,user)
-				return redirect('/blog/posts')
+				return redirect('/blog')
 			else:
 				message='Not Activated'
 		else:

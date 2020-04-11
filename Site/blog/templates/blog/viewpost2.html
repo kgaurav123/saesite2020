@@ -37,13 +37,13 @@
                 <span>
             </div>
             <div class="row">
-                <h3 style="margin-left: 16px;">Comments</h3>
+                <h3 style="margin-left: 16px;"><b>Comments</b></h3>
                 {% for comment in co%}
                     <div class="col-md-12">
                         <div class="card border-secondary mb-3" style="border-bottom: 1px solid rgba(0, 0, 0, 0.267);">
                             
                             <div class="card-body">
-                                <p class="card-text" style="font-size: 30px;">{{comment.text}}</p>
+                                <p class="card-text" style="font-size: 20px;">{{comment.text}}</p>
                                 <div class="card-header">
                                     Commented by: <b>{{comment.author}}</b>
                                   </div>

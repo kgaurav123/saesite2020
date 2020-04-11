@@ -13,7 +13,7 @@
             <h1>UPDATE PROFILE</h1>
         </div>
         </div>
-        <div class="row wow fadeInbottom col-md-8" data-wow-duration="1s" data-wow-delay=".5s" >
+        <div class="row wow fadeInbottom col-md-8" data-wow-duration="1s" data-wow-delay=".5s" style="margin-left: 50%;transform: translateX(-50%);" >
             <form method="POST" class="post-form" enctype='multipart/form-data'>
                 {% csrf_token %}
                 {{ form|crispy }}
