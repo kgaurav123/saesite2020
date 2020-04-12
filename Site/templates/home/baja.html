@@ -1,6 +1,287 @@
 {%extends 'base.html'%}
 {%load static%}
 {%block content%}
+{% block body %}
+<style>
+    #ndors{
+        margin-top: 140px;
+        
+    }
+   
+    .text-muted{
+        
+        font-size: 20px;
+      
+    }
+    .card-wrapper {
+  width: 300px;
+  height: 400px;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  top: 40%;
+  
+  width: 300px;
+  height: 300px;
+ 
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: 0.5s;
+           }
+           @media(min-width: 768px){
+             .card{
+              transform: translate(0%, -50%);
+              left: 40%;
+             }
+             .text-muted{
+                margin:20px 60px 40px 60px;
+             }
+           }
+           @media(max-width: 767px){
+             .card{
+              transform: translate(12%, -50%);
+              left: 0%;
+             }
+             .text-muted{
+                margin:20px 20px 40px 20px; 
+             }
+           }
+  .card-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #000;
+    transition: .5s;
+  }
+  
+ img:hover {
+    opacity: 0.4;
+    transition: .5s;
+  }
+          
+
+.card:hover .card-image {
+  transform: translateY(-100px);
+  transition: all .9s;
+}
+
+/**** Social Icons *****/
+
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+    display: flex;}
+  
+  li {
+    list-style: none;
+    }
+    .links {
+      position: relative;
+      display: block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: transparent;
+      font-size: 23px;
+      color: #333;
+      font-weight: bold;
+      margin: 0 6px;
+      transition: .4s;
+      transform: translateY(200px);
+      opacity: 0;
+    } 
+  
 
 
-{%endblock%}
+.card:hover .social-icons li a {
+  transform: translateY(0px);
+  opacity: 1; 
+}
+
+.social-icons li a:hover {
+  background: transparent; 
+    transition: .2s;}
+  .fa {
+    color: rgb(0, 0, 0);
+  } 
+
+
+.social-icons li a .fa {
+  transition: .8s;
+           }
+  .social-icons li a:hover {
+      transform: rotateY(360deg);
+      color: #fff;
+  } 
+
+.card:hover li:nth-child(1) a {
+    transition-delay: 0.1s;
+}
+.card:hover li:nth-child(2) a {
+  transition-delay: 0.2s;
+}
+.card:hover li:nth-child(3) a {
+  transition-delay: 0.3s;
+}
+.card:hover li:nth-child(4) a {
+  transition-delay: 0.4s;
+}
+
+/**** Personal Details ****/
+
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+  padding: 0px;
+           }
+  h2 {
+    margin: 0px 0;
+    padding: 0;
+    font-size: 25px;
+    text-align: center;
+    }
+    .job-title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        color: #333;
+        font-weight: 300;
+    }
+</style>
+
+
+<section id="ndors">
+    <div class="container wow bounceInDown">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                    <h2 class="section-heading text-uppercase">TEAM NDORS</h2>
+            </div>
+        </div>
+        <p class="text-muted wow " data-wow-duration="1s" data-wow-delay=".5s"><b>Team NDORS</b> The official racing team of nit durgapur
+         Also known as<b> NIT DURGAPUR  OFF ROAD SPORTS.</b> It is a team comprising of 25 passionate and delegate member which works altogether to design, analyse and fabricate an all terrain vehicle to take part in all india
+            <b>BAJA SAE SERIES.</b>The first atv developed by team <b>NDORS</b> was in 2014 and since then Team <b>NDORS</b> is taking part in <b>BAJA SAE SERIES</b> and showing their glory. The atv formed is tested in all possible
+            ways such as endurance, climbing ,braking and acceleration etc. Past year Team <b>NDORS</b> secured 4th  position among <i>IIT’S and NIT’S</i>  and this year also Team <b>NDORS</b> has qualified for the competition and is ready
+           to make their presence felt.</p></div>
+    
+           <div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+						<h2 class="section-heading text-uppercase">WORKSHOPS</h2>
+				</div>
+			</div>
+			<p class="text-muted wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">We, team <b>NDORS</b>, have been successful in conducting workshops in various colleges and educational institutions on Automobile Engineering. One such college, besides our
+                own <b>NIT Durgapur</b>, was <b>IIEST Shibpur</b> who had us organizing a workshop for the students there. By such ventures we have instilled among the students the awareness about <b>BAJA</b> and the motivation
+                to participate more in the competition. In our workshop we teach the students the basics of our 5 departments, namely- <i>roll cage, braking, suspension, powertrain and steering.</i> This not only
+                arouses their interest, but also helps them to learn more on their own.</div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s"">
+                                <h2 class="section-heading text-uppercase">TEAM MEMBERS</h2>
+                        </div>
+                    </div>
+                    <p class="text-muted wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s"">The team consist of 25 members including a Captain and A vice Captain. The team is further divided into 5 departments: which are<br>
+                     
+        1. Power Train<br>
+        2. Suspension<br>
+            3. Braking<br>
+                        4. Steering<br>
+                        5. Rollcage<br>
+                    This year Team NDORS is lead by Captain <b>TANMAY MOHAN DEVLI</b> and vice captain <b>ADDEPALLI MANIDEEP</b></p>
+                    </div>
+                    <div class="container wow bounceInUp">
+                    <div class="row">
+                    <div class="col-md-6">
+                        
+                            <div class="card-wrapper">
+                          <div class="card">
+                            <div class="card-image">
+                            <img src="{% static 'images/tanmay.jpg' %}" class="card-img-top" alt="Tanmay Mohan Devli" style="height: 300px;width: 300px;border-radius: 5px;">
+                            </div>
+                            <div class="details">
+                              <h3 class="card-title"></h3>
+                              <h2>Tanmay Mohan Devli
+                                <br>
+                               
+                                <span class="job-title">CAPTAIN</span>
+                               
+                              </h2>
+                            </div>
+                            <ul class="social-icons">
+                              <li>
+                                <a class="links" href="https://www.facebook.com/tanmay.devli">
+                                  <i class="fa fa-facebook fa-1x"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="links" href="">
+                                  <i class="fa fa-phone fa-1x" onclick="alert('Phone Number: '+ 953635410)"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="links" href="mailto:teamndors@gmail.com">
+                                  <i class="fa fa-envelope fa-1x"></i>
+                                </a>
+                              </li>
+                              
+                            </ul>
+                      </div>
+                    </div>
+                          </div> 
+                          <div class="col-md-6">
+                        
+                            <div class="card-wrapper">
+                          <div class="card">
+                            <div class="card-image">
+                            <img src="{% static 'images/manideep.jpg' %}" class="card-img-top" alt="" style="height: 300px;width: 300px;border-radius: 5px;">
+                            </div>
+                            <div class="details">
+                              <h3 class="card-title"></h3>
+                              <h2>Addepalli Mandeep
+                                <br>
+                               
+                                <span class="job-title">VICE-CAPTAIN</span>
+                               
+                              </h2>
+                            </div>
+                            <ul class="social-icons">
+                              <li>
+                                <a class="links" href="https://www.facebook.com/Manideepaddeapalli">
+                                  <i class="fa fa-facebook fa-1x"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="links" href="">
+                                  <i class="fa fa-phone fa-1x" onclick="alert('Phone Number: '+ 7780333952)"></i>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="links" href="mailto:teamndors@gmail.coM">
+                                  <i class="fa fa-envelope fa-1x"></i>
+                                </a>
+                              </li>
+                              
+                            </ul>
+                      </div>
+                    </div>
+                          </div></div>
+                        </div>
+                      
+</section>
+    {% endblock body %}
+
+    {%endblock%}
