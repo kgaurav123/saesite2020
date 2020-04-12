@@ -27,8 +27,8 @@ def signup(request):
 def login_view(request):
 	message='Log In'
 	if request.method=='POST':
-		_username=request.POST['username']
-		_password=request.POST['password']
+		_username=request.POST.get('username',False)
+		_password=request.POST.get('password',False)
 		user=authenticate(username=_username,password=_password)
 		if user is not None:
 			if user.is_active:
@@ -52,7 +52,7 @@ def update_profile(request):
 		if form.is_valid:
 			form.save()
 
-			return redirect('/blog/posts')
+			return redirect('/blog')
 	else:
 		form=ProfileUpdateForm()
 	return render(request,'blog/formupdate.html',{'form':form})
@@ -74,7 +74,7 @@ def create_post(request):
 			p.save()
 			#form.save()
 			
-			return redirect('/blog/posts')
+			return redirect('/blog')
 	else:
 		form=CreatePostForm()
 	
@@ -103,7 +103,7 @@ def confirm_delete(request,key):
 def post_delete(request,key):
 	posts=Posts.objects.get(id=key)
 	posts.delete()
-	return redirect('/blog/posts')
+	return redirect('/blog')
 @login_required
 def create_comment(request,key):
 	posts=Posts.objects.get(id=key)
@@ -131,3 +131,13 @@ def create_like(request,key):
 	print(number)
 	#if not create:
 	return redirect('/blog/posts/% s' %key)
+
+## for profile details
+def view_profile(request,key):
+	profile = Profile_blog.objects.get(id=key)
+	user = User.objects.get(profile_blog = profile)
+	posts = Posts.objects.get(author=user).order_by('-date')
+	likes = 0
+	for i in posts:
+		likes += i.likes.all().count()
+	return render(request,'blog/profile_view.html',{'profile':profile,'posts':posts,'likes':likes})
