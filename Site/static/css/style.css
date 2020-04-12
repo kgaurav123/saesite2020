@@ -53,6 +53,7 @@ p {
 }
 .navbar-default .navbar-nav > li > a {
     color: #B5B5B5;
+    
     font-family: "Raleway", sans-serif;
     transition: all 1s;
     -moz-transition: all 1s;

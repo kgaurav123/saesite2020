@@ -42,7 +42,7 @@ p {
 
 .navbar-default {
   
-    background-color: transparent;
+    background-color: red;
     border-color: #444;
     z-index: 110;
     transition: all 1s;
