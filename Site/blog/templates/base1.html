@@ -1,12 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
 <html>
-<title>SAE</title>
-NAVBAR--------
-<a href="{% url 'post_list' %}">home</a>
-<a href="{% url 'blogout' %}">logout</a>
-<a href="{% url 'bupdate' %}">UpdateProfile</a>
-<a href="{% url 'create_post' %}">Create Post</a>
+<head>
+<title>SAE-NIT Durgapur</title>
+<meta charset="utf-8">
+
+<meta name="description" content="SAE Students' Chapter NIT Durgapur"/>
+<meta name="keywords" content="SAE,NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR,NIT Durgapur clubs,NIT Durgapur Society,SAE Students' Chapter,SAEINDIA"/>
+<meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+        
+        
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Raleway:500italic,600italic,600,700,700italic,300italic,300,400,400italic,800,900' rel='stylesheet' type='text/css'>
+        
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,600italic,700,900' rel='stylesheet' type='text/css'>
+        
+<!-- favicon -->
+<link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+        
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+        
+<!-- Fontawesome  -->
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        
+<!-- Animate CSS -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+        
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        
+<!-- BX slider CSS -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.bxslider.css' %}">
+        
+<!-- responsive css -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+
+<script src="https://kit.fontawesome.com/ca1cdc2614.js" crossorigin="anonymous"></script>
+        <style>
+          .social:link, .social:visited {
+            color: white;
+  background-color: transparent;
+  text-decoration: none;
+
+}
+
+.social:hover, .social:active {
+    color: blue;
+  background-color: transparent;
+  
+}
+.shead{
+     text-align:center;
+     color:white;
+     margin-bottom:30px;
+}
+.footer{
+    padding:20px;
+}
+          </style>
+</head>
+<body>
+
+ <!-- Header -->
+<header id="HOME">          
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#loso-navbar-collapse-1" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#">
+<!-- small size logo -->
+<h3>SAE-brand-holder</h3>
+</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="loso-navbar-collapse-1">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="{% url 'home' %}" class="nav-item">HOME</a></li>
+{% if user.is_authenticated %}
+<li><a href="{% url 'bupdate' %}" class="nav-item">UPDATE PROFILE</a></li>
+<li><a href="{% url 'create_post' %}" class="nav-item">CREATE POST</a></li>
+<li><a href="{% url 'blogout' %}" class="nav-item">LOGOUT</a></li>
+
+
+{% else %}
+<li><a href="{% url 'bsignup' %}" class="nav-item">SIGNUP</a></li>
+<li><a href="{% url 'blogin' %}" class="nav-item">LOGIN</a></li>
+{% endif %}
+
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</div>
+<!-- /.container-fluid -->
+</nav>
+</header>
 
 {% block body %}
-
 {% endblock body %}
+<footer class="footer">
+<div class="container">
+<div class="row">
+    <h1 class="shead wow bounceInUp">Contact Us</h1>
+<div class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">  
+    
+    <div class="col-md-3 col-sm-3 mb-2 text-center">
+    <i class="fa fa-map-marker fa-2x mb-3 sr-contact-1" style="color:white"></i>
+    <p style="color:white">
+        NIT Durgapur
+        <br> West Bengal-713209
+    </p>
+    </div>
+    <div class="col-md-3 col-sm-3 mb-2 text-center">
+    <i class="fa fa-facebook fa-2x mb-3 sr-contact-2" style="color:white"></i>
+    <p><a class="social" href="https://www.facebook.com/SAENITD/">SAENITD</a></p>
+
+    </div>
+</div>
+
+<div class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">  
+    <div class="col-md-3 col-sm-3 mb-2 text-center">
+    <i class="fa fa-instagram fa-2x mb-3 sr-contact-2" style="color:white"></i>
+    <p><a class="social" href="https://www.instagram.com/sae_nit_dgp/">SAENITD</a></p>
+    </div>
+    <div class="col-md-3 mb-2 text-center">
+    <i class="fa fa-envelope fa-2x mb-3 sr-contact-3" style="color:white"></i>
+    <p><a class="social" href="mailto:sae.nitdgp1@gmail.com">sae.nitdgp1@gmail.com</a> </p>
+    </div>
+</div>
+<div class="wow bounceInDown">
+    <div class="col-md-12 col-sm-3 mb-2 text-right">
+
+        <div class="scroll-top">
+            <a href="#HOME" id="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- Bootstrap JavaScript -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+        
+<!-- Bx Slider JS -->
+<script src="{% static 'js/jquery.bxslider.min.js' %}"></script>
+        
+<!-- Add JS counter lib -->
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+   
+<!-- Add wow js lib -->
+<script src="{% static 'js/wow.min.js' %}"></script>
+     
+<!-- Custom Js -->
+<script src="{% static 'js/custom.js' %}"></script>
+</body>   
 </html>
