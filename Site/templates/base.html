@@ -83,7 +83,7 @@
 <a class="navbar-brand" href="#">
 <!-- small size logo -->
 
-<img id="saelogo" src={% static 'images/saelogo.png'%}>
+<img id="saelogo" src={% static 'images/saelogo.png' %}>
 </a>
 </div>
 
@@ -94,9 +94,9 @@
 <ul class="nav navbar-nav navbar-right">
 <li><a href="/" class="nav-item">HOME</a></li>
 <li><a href="#ABOUT" class="nav-item">ABOUT</a></li>
-<li><a href="#CONTACT" class="nav-item">MEMBERS</a></li>
-<li><a href="#FEATURES" class="nav-item">EVENTS</a></li>
-<li><a href="#SCREENS" class="nav-item">SAE BAJA</a></li>
+<li><a href="{% url 'member_list'%}" class="nav-item">MEMBERS</a></li>
+<li><a href="{% url 'events' %}" class="nav-item">EVENTS</a></li>
+<li><a href="{%url 'baja' %}" class="nav-item">SAE BAJA</a></li>
 <li><a href="/blog" class="nav-item">BLOG</a></li>
 
 </ul>

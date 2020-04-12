@@ -6,6 +6,9 @@
         background-color: #fff !important;
         border-color: #e6e6e6;
     }
+    .navbar-default .navbar-nav > li > a {
+        background-color: rgb(30, 9, 9);
+    }
     .about-iphone img {
         width: 100%;
     }
