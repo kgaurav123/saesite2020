@@ -53,6 +53,7 @@ p {
 }
 .navbar-default .navbar-nav > li > a {
     color: #B5B5B5;
+    
     font-family: "Raleway", sans-serif;
     transition: all 1s;
     -moz-transition: all 1s;
@@ -86,7 +87,7 @@ p {
 
 /* =========== Header ============ */
 .header {
-    animation:slide 15s infinite; 
+    animation:slide 30s infinite; 
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -97,15 +98,24 @@ p {
     
 }
  @keyframes slide{
-          0%{
-              background-image:url("../images/header-bg.jpg");
-          }
-          50%{
-              background-image:url('https://mdbootstrap.com/img/Photos/Slides/img%20(52).jpg');
-          }
-          100%{
-              background-image:url('https://mdbootstrap.com/img/Photos/Slides/img%20(53).jpg');
-          }
+    100%,0%{
+        background-image:url("../images/web.jpg");
+    }
+    17%{
+        background-image:url("../images/2.jpg");
+    }
+    34%{
+        background-image:url("../images/3.jpg");
+    }
+    51%{
+        background-image:url("../images/4.jpg");
+    }
+    68%{
+        background-image:url("../images/5.jpg");
+    }
+    85%{
+        background-image:url("../images/6.jpg");
+    }
       }
 .header-overlay {
     background-color: rgba(31, 31, 31, 0.75);
@@ -146,7 +156,7 @@ p {
 }
 /* ========= Testimonials ============= */
 .testimonial {
-    background-image: url("../images/testimonial-bg.jpg");
+    background-image: url("../images/testimonial.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -157,14 +167,14 @@ p {
 }
 .testimonial-overlay {
     background-color: rgba(31, 31, 31, .75);
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .carousel-indicators {
     bottom: -10px;
 }
 .carousel-inner .item img {
-    border: 2px solid #129CF3;
+    border: 1px solid #129CF3;
     border-radius: 50%;
     padding: 3px;
 }
@@ -174,7 +184,7 @@ p {
 .testimonial-caption h2 {
     color: #129CF3;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 30px;
     margin-top: 25px;
     
@@ -186,16 +196,13 @@ p {
 .testimonial-caption h4 span {
     
     color: #D8D8D8;
-    font-style: italic;
+   
     font-weight: 300;
     
 }
-
-.testimonial-caption p {
-    color: #D8D8D8;
-    font-size: 18px;
-    line-height: 27px;
-    padding-top: 50px;
+.center-block{
+    height: 200px!important;
+    width: 200px!important;
 }
 /* ========= Features ============= */
 .features-inner-wrapper {

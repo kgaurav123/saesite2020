@@ -1,13 +1,42 @@
 {% extends 'base1.html' %}
-
+{%load static%}
 {% block body %}
-	<form method="POST">
-		{% csrf_token %}
-	<h2>Do u want to delete This post</h2>
 
-        <a class="btn btn-outline-danger" href="{% url 'post_delete' posts.id %}">Delete</button></a>
-        <a class="btn btn-outline-danger" href="{% url 'post_details' posts.id %}">Cancel</a>
-	 </form>
+<section id="ABOUT" >
+    <div class="choose-us-wraper">           
+    <div class="container">              
+    <div class="row">
+    
+    <div class="col-md-12" style="text-align: center;margin-bottom: 2%;">
+        <h1 style="margin-top: 5%;">COMMENT</h1>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row wow fadeInbottom col-md-10" data-wow-duration="1s" data-wow-delay=".5s" style="margin-left: 50%;transform: translateX(-50%);text-align: center;">
+            
+				
+
+				<div class="card" >
+					<div class="card-header">
+						<h2>Are you sure you want to delete This post ?</h2>
+					</div>
+					<div class="card-body">
+					  <div class="row">
+						<a class="btn btn-outline-danger" href="{% url 'post_delete' posts.id %}">Delete</button></a>
+						<a class="btn btn-outline-danger" href="{% url 'post_details' posts.id %}">Cancel</a>
+					  </div>
+					</div>
+				  </div>
+				
+		
+			
+        </div>  
+    </div>       
+    </div>
+    </div>
+    </div>
+    </section>
+	
 
 
 {% endblock body %}

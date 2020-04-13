@@ -32,8 +32,8 @@ $(document).ready(function(){
             });
             
             $('.navbar-brand img').css({
-               'height': '35px',
-                'padding-top': '0px'
+               'height': '120px',
+                'margin-top': '-30px'
                 
             });
             

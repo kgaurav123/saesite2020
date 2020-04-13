@@ -1,20 +1,36 @@
-<html>
-<title>SAE</title>
+{% extends 'base1.html' %}
 {% load static %}
+{%block body%}
 
-<body>
-<form method="post">
-	{{message}}<br>
-	
-   {% csrf_token %} Username: <input type="text" name="username" />
-  <br />
-  Password: <input type="password" name="password" />
-  <br />
-  <button type="submit" class="btn btn-success">Log In!</button>
+    <!-- About Us -->
+    <section id="ABOUT">
+        <div class="choose-us-wraper">           
+        <div class="container">              
+        <div class="row">
+        
+        <div class="col-md-12" style="text-align: center;margin-bottom: 8%;">
+            <h1>LOGIN</h1>
+        </div>
+        </div>
+        <div class="row wow fadeInbottom col-md-8" data-wow-duration="1s" data-wow-delay=".5s" style="margin-left: 50%;transform: translateX(-50%);" >
 
+          <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <label>Username</label>
+              <input type="text" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+              <label>Password</label><br>
+              <input type="password" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">LOGIN</button>
+          </form>
+        </div>         
+        </div>
+        </div>
+        </div>
+        </section>
 
+ {% endblock %}
 
-</form>
-
-</body>
-</html>

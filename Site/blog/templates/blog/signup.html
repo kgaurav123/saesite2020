@@ -1,17 +1,28 @@
-<html>
-<title>SAE</title>
+{% extends 'base1.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
+{%block body%}
 
+    <!-- About Us -->
+    <section id="ABOUT">
+        <div class="choose-us-wraper">           
+        <div class="container">              
+        <div class="row">
+        
+        <div class="col-md-12" style="text-align: center;margin-bottom: 8%;">
+            <h1>SIGNUP</h1>
+        </div>
+        </div>
+        <div class="row wow fadeInbottom col-md-8" data-wow-duration="1s" data-wow-delay=".5s" style="margin-left: 50%;transform: translateX(-50%);" >
+            <form method="POST" class="post-form" enctype='multipart/form-data'>
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="save btn btn-default">SIGNUP</button>
+            </form>
+        </div>         
+        </div>
+        </div>
+        </div>
+        </section>
 
-<body>
-{% csrf_token %}
-<div class='container'>
-<form method="post" action="">
-	{% csrf_token %}
-	{{form.as_p}}
-	<input type="submit">
-</form>
-
-</div>
-</body>
-</html>
+ {% endblock %}
