@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
 * {
     margin: 0;
     padding: 0;
+}
+h1,h2{
+    font-family: 'Share Tech Mono', monospace
 }
 body {
     font-family: 'Raleway', sans-serif;
@@ -59,14 +63,12 @@ p {
     -moz-transition: all 1s;
     -o-transition: all 1s;
     -webkit-transition: all 1s;
-    s
+    
 }
 .navbar-default .navbar-nav > li > a:hover {
     color: #129CF3;
 }
-.navbar-default .navbar-nav > li > a:focus {
-    color: #B5B5B5;
-}
+
 .navbar-brand {
     padding: 9px 15px;
 }
@@ -76,14 +78,6 @@ p {
     -o-transition: all 1s;
     -webkit-transition: all 1s;
 }
-.navbar-default .navbar-nav > .active>a, 
-.navbar-default .navbar-nav > .active>a:hover,
-.navbar-default .navbar-nav > .active>a:focus {
-    background-color: rgb(161, 161, 161);
-    color: #129CF3;
-} 
-
-
 
 /* =========== Header ============ */
 .header {
@@ -474,9 +468,10 @@ p {
 }
 .scroll-top {
     text-align: right;
+    
 }
 .scroll-top a {
-    background-color: #129CF3;
+    background-color: rgba(114, 114, 114, 0.692);
     padding: 25px;
 }
 .scroll-top a i {
