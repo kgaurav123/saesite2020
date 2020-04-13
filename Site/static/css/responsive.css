@@ -7,7 +7,8 @@
         border-color: #e6e6e6;
     }
     .navbar-default .navbar-nav > li > a {
-        background-color: rgb(30, 9, 9);
+        background-color: #fff;
+        color: rgb(0, 0, 0);
     }
     .about-iphone img {
         width: 100%;

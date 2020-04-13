@@ -42,7 +42,7 @@ p {
 
 .navbar-default {
   
-    background-color: transparent;
+    background-color: rgb(70, 66, 66);
     border-color: #444;
     z-index: 110;
     transition: all 1s;
@@ -52,14 +52,14 @@ p {
     height: 10%;
 }
 .navbar-default .navbar-nav > li > a {
-    color: #B5B5B5;
+    color: rgb(243, 243, 243);
     
     font-family: "Raleway", sans-serif;
     transition: all 1s;
     -moz-transition: all 1s;
     -o-transition: all 1s;
     -webkit-transition: all 1s;
-    
+    s
 }
 .navbar-default .navbar-nav > li > a:hover {
     color: #129CF3;
@@ -79,7 +79,7 @@ p {
 .navbar-default .navbar-nav > .active>a, 
 .navbar-default .navbar-nav > .active>a:hover,
 .navbar-default .navbar-nav > .active>a:focus {
-    background-color: transparent;
+    background-color: rgb(161, 161, 161);
     color: #129CF3;
 } 
 
