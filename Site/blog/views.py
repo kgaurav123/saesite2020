@@ -92,9 +92,32 @@ def post_details(request,key):
 	number_likes=posts.likes.all().count()
 
 	if posts.author==request.user:
-		return render(request,'blog/viewpost1.html',{'posts':posts,'co':co,'number_likes':number_likes})#Add delete post option
+		if request.method=='POST':
+			form=CreateCommentForm(request.POST)
+			if form.is_valid():
+				p=form.save(commit=False)
+				p.author=request.user
+				p.posts=posts
+				p.save()
+				#next = request.POST.get('next',None)
+				#return HttpResponseRedirect(next)
+				#return redirect('/home/key/')
+				return redirect('/blog/posts/%s' % key )
+		else:
+			form=CreateCommentForm()
+		return render(request,'blog/viewpost1.html',{'posts':posts,'co':co,'number_likes':number_likes,'form':form})#Add delete post option
 	else:
-		return render(request,'blog/viewpost2.html',{'posts':posts,'co':co,'number_likes':number_likes})
+		if request.method=='POST':
+			form=CreateCommentForm(request.POST)
+			if form.is_valid():
+				p=form.save(commit=False)
+				p.author=request.user
+				p.posts=posts
+				p.save()
+				return redirect('/blog/posts/%s' % key )
+		else:
+			form=CreateCommentForm()
+		return render(request,'blog/viewpost2.html',{'posts':posts,'co':co,'number_likes':number_likes,'form':form})
 @login_required
 def confirm_delete(request,key):
 	posts=Posts.objects.get(id=key)
@@ -104,25 +127,7 @@ def post_delete(request,key):
 	posts=Posts.objects.get(id=key)
 	posts.delete()
 	return redirect('/blog')
-@login_required
-def create_comment(request,key):
-	posts=Posts.objects.get(id=key)
 
-	if request.method=='POST':
-		form=CreateCommentForm(request.POST)
-		if form.is_valid():
-			p=form.save(commit=False)
-			p.author=request.user
-			p.posts=posts
-			p.save()
-			#next = request.POST.get('next',None)
-			#return HttpResponseRedirect(next)
-			#return redirect('/home/key/')
-			return redirect('/blog/posts/%s' % key )
-	else:
-		form=CreateCommentForm()
-
-	return render(request,'blog/create_comment.html',{'form':form})
 @login_required
 def create_like(request,key):
 	posts=Posts.objects.get(id=key)
