@@ -19,7 +19,8 @@ def events(request):
 	return render(request,'home/events.htm',{'events':event_list})
 
 def event_details(request,pk):
-	pass
+	event = Event.objects.get(id = pk)
+	return render(request,'home/event_details.html',{'event':event})
 
 def members(request):
     return render(request,'home/members.html')
