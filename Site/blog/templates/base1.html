@@ -57,6 +57,11 @@
 .footer{
     padding:20px;
 }
+#saelogo{
+    height:200px;
+    width:auto;
+    margin-left:-10%;
+}
           </style>
 </head>
 <body>
@@ -76,13 +81,18 @@
 </button>
 <a class="navbar-brand" href="#">
 <!-- small size logo -->
-<h3>SAE-brand-holder</h3>
+<a class="navbar-brand" href="#">
+    <!-- small size logo -->
+    
+    <img id="saelogo" src={% static "images/saelogo.png" %}>
+    </a>
 </a>
 </div>
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse" id="loso-navbar-collapse-1">
 <ul class="nav navbar-nav navbar-right">
-<li><a href="{% url 'home' %}" class="nav-item">HOME</a></li>
+<li><a href="{% url 'index' %}" class="nav-item">HOME</a></li>
+<li><a href="{% url 'home' %}" class="nav-item">BLOG HOME</a></li>
 {% if user.is_authenticated %}
 <li><a href="{% url 'bupdate' %}" class="nav-item">UPDATE PROFILE</a></li>
 <li><a href="{% url 'create_post' %}" class="nav-item">CREATE POST</a></li>
@@ -93,6 +103,7 @@
 <li><a href="{% url 'bsignup' %}" class="nav-item">SIGNUP</a></li>
 <li><a href="{% url 'blogin' %}" class="nav-item">LOGIN</a></li>
 {% endif %}
+
 
 </ul>
 </div>

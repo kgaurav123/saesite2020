@@ -15,7 +15,6 @@ urlpatterns=[
 				path('posts/<key>/',views.post_details,name='post_details'),
 				path('posts/<key>/confirm_delete/',views.confirm_delete,name='confirm_delete'),
 				path('posts/<key>/confirm_delete/deleted',views.post_delete,name='post_delete'),
-				path('posts/<key>/create_comment',views.create_comment,name='create_comment'),
 				path('posts/<key>/likes',views.create_like,name='likes'),
 				#path('view_profile/<key>',views.view_profile,name='profile_view'),
 			]

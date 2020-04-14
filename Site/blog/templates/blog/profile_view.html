@@ -1,0 +1,29 @@
+{%extends 'base1.html' %}
+{%load static%}
+{% block body %}
+
+    <!-- About Us -->
+<section id="ABOUT" >
+    <div class="choose-us-wraper">           
+    <div class="container">              
+    <div class="row">
+    
+    <div class="col-md-12" style="text-align: center;margin-bottom: 2%;">
+        <h1 style="margin-top: 5%;">{{posts.title}}</h1>
+        <h3><i>Contributed by {{posts.author}}</i></h3>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row wow fadeInbottom col-md-10" data-wow-duration="1s" data-wow-delay=".5s">
+            <div class="row">
+                
+                {{profile.first_name}}
+                
+            </div>
+        </div>  
+    </div>       
+    </div>
+    </div>
+    </div>
+    </section>
+{% endblock body %}
