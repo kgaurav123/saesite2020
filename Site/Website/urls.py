@@ -5,6 +5,7 @@ from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from Site import settings
 
+
 urlpatterns = [
     path('',views.index,name='index'),
     path('baja/',views.baja,name='baja'),
@@ -17,8 +18,6 @@ urlpatterns = [
     
 
     path('events/',views.events,name='events'),
-    path('events/event_detail/<int:pk>',views.event_details,name='event_details'),
-
     
 ]
 

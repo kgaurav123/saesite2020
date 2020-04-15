@@ -1,6 +1,7 @@
 {%extends 'base1.html' %}
 {%load static%}
 {% block body %}
+{% load crispy_forms_tags %}
 
     <!-- About Us -->
 <section id="ABOUT" >
@@ -32,12 +33,19 @@
                 <span style="font-size: 20px;margin-left: 5px;margin-right: 20px;">
                     {{number_likes}}
                 </span>
-                <span>
-                    <a href="{% url 'create_comment' posts.id%}"><i class="far fa-comment-alt fa-2x">    Comment</i></a>
-                <span>
             </div>
             <div class="row">
-                <h3 style="margin-left: 16px;"><b>Comments</b></h3>
+                <h3 style="margin-left: 16px;"><b>Comment</b></h3>
+                <div class="container">
+                    <div class="row wow fadeInbottom col-md-10" data-wow-duration="1s" data-wow-delay=".5s">
+                        <form method="POST" class="post-form" enctype='multipart/form-data'>
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                           
+                            <button type="submit" class="save btn btn-default">Save</button>
+                        </form>
+                    </div>  
+                </div> 
                 {% for comment in co%}
                     <div class="col-md-12">
                         <div class="card border-secondary mb-3" style="border-bottom: 1px solid rgba(0, 0, 0, 0.267);">

@@ -13,7 +13,7 @@ $(document).ready(function(){
            
             
             $('.navbar-default').css({
-                'background-color': 'rgba(59, 59 , 59, 0)'
+                'background-color': 'rgb(70, 66, 66)'
                 
             });
             
@@ -26,16 +26,12 @@ $(document).ready(function(){
             });
             
             $('.navbar-default').css({
-                'background-color': 'rgba(59, 59 , 59, 0.7)',
+                'background-color': 'rgb(70, 66, 66)',
                 'border-color': '#444'
                 
             });
             
-            $('.navbar-brand img').css({
-               'height': '120px',
-                'margin-top': '-30px'
-                
-            });
+           ;
             
             $('.navbar-nav > li > a ').css({
                 'padding-top': '15px'

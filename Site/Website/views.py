@@ -9,17 +9,15 @@ from .models import *
 
 # Create your views here.
 def index(request):
-    return render(request,'home/index.html') 
+	events = Event.objects.all().order_by('-date','-time')[:3]
+	return render(request,'home/index.html',{'events':events}) 
 
 def baja(request):
     return render(request,'home/baja.html')
 
 def events(request):
-	event_list = Event.objects.all()
+	event_list = Event.objects.all().order_by('-date','-time')
 	return render(request,'home/events.htm',{'events':event_list})
-
-def event_details(request,pk):
-	pass
 
 def members(request):
     return render(request,'home/members.html')
