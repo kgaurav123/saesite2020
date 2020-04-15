@@ -59,15 +59,19 @@ def logout_view(request):
 
 @login_required
 def update_profile(request):
+	message='Update'
 	if request.method=='POST':
 		form=ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
 		if form.is_valid:
 			form.save()
 
 			return redirect('/logout')
+		else:
+			message='Image size should be less tahn 1mb'
+			return redirect('/update')
 	else:
 		form=ProfileUpdateForm()
-	return render(request,'home/formupdate.html',{'form':form})
+	return render(request,'home/formupdate.html',{'form':form,'message':message})
 
 def member_list(request):
 	office_bearers = Profile.objects.filter(year = 4).order_by('post')

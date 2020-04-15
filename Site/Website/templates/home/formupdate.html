@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
 
 <form method="POST" class="post-form" enctype='multipart/form-data'>
+	{{message}}<br>
     	{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Save</button>

@@ -21,7 +21,7 @@ class Profile(models.Model):
         (4,'Final Year'),
     ]
     dept_choices = [
-        ('OFFICE BEARERS','Office Bearers'),
+        #('OFFICE BEARERS','Office Bearers'),
         ('MANAGEMENT','Management'),
         ('TECHNICAL','Technical'),
         ('WEBD','Web Developement'),
