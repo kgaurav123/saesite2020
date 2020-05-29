@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponseRedirect, redirect
+from django.shortcuts import render, HttpResponseRedirect, redirect, HttpResponse
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
@@ -74,9 +74,9 @@ def update_profile(request):
 	return render(request,'home/formupdate.html',{'form':form,'message':message})
 
 def member_list(request):
-	office_bearers = Profile.objects.filter(year = 4).order_by('post')
+	office_bearers = Profile.objects.filter(year = 4).order_by('-timestamp')
 
-	management_final=Profile.objects.filter(department="MANAGEMENT",year=4).order_by('post')
+	management_final=Profile.objects.filter(department="MANAGEMENT",year=4).order_by('first_name')
 	management_third=Profile.objects.filter(department="MANAGEMENT",year=3)
 	management_second=Profile.objects.filter(department="MANAGEMENT",year=2)
 
@@ -95,12 +95,11 @@ def member_list(request):
 	baja_final=Profile.objects.filter(department="NDORS",year=4)
 	baja_third=Profile.objects.filter(department="NDORS",year=3)
 	baja_second=Profile.objects.filter(department="NDORS",year=2)
-	
 
 	return render(request,'home/members.html',{'office_bearers':office_bearers,'management_final':management_final,
 	'management_third':management_third,'management_second':management_third,'technical_final':technical_final,
 	'technical_third':technical_third,'technical_second':technical_second,'webd_final':webd_final,'webd_third':webd_third,
 	'webd_second':webd_second,'graphics_final':graphics_final,'graphics_third':graphics_third,'graphics_second':graphics_second,
 	'baja_final':baja_final,'baja_third':baja_third,'baja_second':baja_second})
-
-
+def slug(request,slug):
+	return HttpResponse('404 Not found')

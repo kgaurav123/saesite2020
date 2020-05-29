@@ -59,7 +59,10 @@ class Profile(models.Model):
     email=models.EmailField(null=True, blank=True)
     phone=models.CharField(null=True,blank=False, max_length=15)
     photo = models.ImageField(null=True, blank=False,upload_to='profile_pics',validators=[validate_image_size])
-
+    timestamp = models.DateTimeField(blank=False)
+    
+    class Meta:
+        ordering=('-year',)
     def __str__(self):
         #return (self.first_name + self.last_name)
         return (str(self.user))
