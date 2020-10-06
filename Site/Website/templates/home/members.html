@@ -164,7 +164,7 @@
 
 </style>
 <script>
-  function myFunction() {
+  function myFunction6() {
     document.getElementById("of").style.display = "block";
     document.getElementById("ma").style.display = "none";
     document.getElementById("tech").style.display = "none";
@@ -219,7 +219,7 @@
   <div class="row">
     <div class="row" style="padding:1vw;"></div>
       <div class="col-xs-4 col-md-2" style="padding:1vw;">
-          <a class="btn btn-primary btn-md col" class="show" onclick="myFunction()"><i class="fa fa-users fa-3x"></i></a>
+          <a class="btn btn-primary btn-md col" class="show" onclick="myFunction6()"><i class="fa fa-users fa-3x"></i></a>
       </div>
       <div class="col-xs-4 col-md-2" style="padding:1vw;">
           <a class="btn btn-primary btn-md col" class="show1" onclick="myFunction1()"><i class="fa fa-tasks fa-3x "></i></a>
@@ -246,7 +246,8 @@
   <div class="container">
    <div class="row">
       <div class="col-md-12">
-        {%for i in office_bearers%}
+        {%for i in office_bearers %}
+            
           <div class="col-md-4">
             <div class="container" style="margin-bottom: 20px;">
                 <div class="card-wrapper">
@@ -286,6 +287,7 @@
               </div>
             </div>
           </div>
+         
         {% endfor %}
       
    </div>

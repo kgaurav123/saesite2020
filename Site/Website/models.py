@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.db.models.signals import post_save 
 from django.core.exceptions import ValidationError
-
+from django.utils import timezone  
 
 
 def validate_image_size(value):
@@ -37,10 +37,11 @@ class Profile(models.Model):
         ('TECH HEAD','Tech Head'),
         ('DESIGN HEAD','Design Head'),
         ('WEBD','web D'),
-        ('PUBLICITY HEAD','Publicity Head'),
+        ('PUBLIC RELATIONS HEAD','Public relations Head'),
         ('CREATIVE HEAD','Creative Head'),
         ('SPONSORSHIP HEAD','Sponsorship Head'),
         ('ACCOMODATION,TRAVEL AND HOSPITALITY HEAD','Accomodation,travel and Hospitality Head'),
+        ('OPERATIONS HEAD','Operations Head'),
         ('BAJA COORDINATOR','Baja coordinator'),
         ('WORKSHOP HEAD','Workshop Head'),
         ('EVENTS HEAD','Events Head'),
@@ -59,7 +60,7 @@ class Profile(models.Model):
     email=models.EmailField(null=True, blank=True)
     phone=models.CharField(null=True,blank=False, max_length=15)
     photo = models.ImageField(null=True, blank=False,upload_to='profile_pics',validators=[validate_image_size])
-    timestamp = models.DateTimeField(blank=False)
+    timestamp = models.DateTimeField(blank=True,default=timezone.now)
     
     class Meta:
         ordering=('-year',)

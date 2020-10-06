@@ -44,7 +44,7 @@ def login_view(request):
 		if user is not None:
 			if user.is_active:
 				login(request,user)
-				return redirect('/update')
+				return redirect('/update/')
 			else:
 				message='Not Activated'
 		else:
@@ -65,30 +65,30 @@ def update_profile(request):
 		if form.is_valid:
 			form.save()
 
-			return redirect('/logout')
+			return redirect('/logout/')
 		else:
 			message='Image size should be less tahn 1mb'
-			return redirect('/update')
+			return redirect('/update/')
 	else:
 		form=ProfileUpdateForm()
 	return render(request,'home/formupdate.html',{'form':form,'message':message})
 
 def member_list(request):
-	office_bearers = Profile.objects.filter(year = 4).order_by('-timestamp')
+	office_bearers = Profile.objects.filter(year = 4).exclude(post="NONE").exclude(department="NDORS").order_by('timestamp')
 
-	management_final=Profile.objects.filter(department="MANAGEMENT",year=4).order_by('first_name')
+	management_final=Profile.objects.filter(department="MANAGEMENT",year=4).order_by('timestamp')
 	management_third=Profile.objects.filter(department="MANAGEMENT",year=3)
 	management_second=Profile.objects.filter(department="MANAGEMENT",year=2)
 
-	technical_final=Profile.objects.filter(department="TECHNICAL",year=4).order_by('post')
+	technical_final=Profile.objects.filter(department="TECHNICAL",year=4).order_by('timestamp')
 	technical_third=Profile.objects.filter(department="TECHNICAL",year=3)
 	technical_second=Profile.objects.filter(department="TECHNICAL",year=2)
 
-	webd_final=Profile.objects.filter(department="WEBD",year=4).order_by('post')
+	webd_final=Profile.objects.filter(department="WEBD",year=4).order_by('timestamp')
 	webd_third=Profile.objects.filter(department="WEBD",year=3)
 	webd_second=Profile.objects.filter(department="WEBD",year=2)
 
-	graphics_final=Profile.objects.filter(department="GRAPHICS",year=4).order_by('post')
+	graphics_final=Profile.objects.filter(department="GRAPHICS",year=4).order_by('timestamp')
 	graphics_third=Profile.objects.filter(department="GRAPHICS",year=3)
 	graphics_second=Profile.objects.filter(department="GRAPHICS",year=2)
 
@@ -97,7 +97,7 @@ def member_list(request):
 	baja_second=Profile.objects.filter(department="NDORS",year=2)
 
 	return render(request,'home/members.html',{'office_bearers':office_bearers,'management_final':management_final,
-	'management_third':management_third,'management_second':management_third,'technical_final':technical_final,
+	'management_third':management_third,'management_second':management_second,'technical_final':technical_final,
 	'technical_third':technical_third,'technical_second':technical_second,'webd_final':webd_final,'webd_third':webd_third,
 	'webd_second':webd_second,'graphics_final':graphics_final,'graphics_third':graphics_third,'graphics_second':graphics_second,
 	'baja_final':baja_final,'baja_third':baja_third,'baja_second':baja_second})
