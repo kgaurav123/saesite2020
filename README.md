@@ -30,8 +30,9 @@ cd saesite2020
   ```
   Scripts\activate
   ```
+  
   The dependencies used can be found under requirements.txt file
-
+-Do the required changes.
 - Stage your changes
   - For example, if you have added 1 file
     ``` 
