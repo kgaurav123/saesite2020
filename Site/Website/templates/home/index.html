@@ -39,6 +39,14 @@
         border-radius: 50%;
         height: 220px;
         width: 220px;
+        opacity: 1.0;
+        filter: alpha(opacity=100);
+    }
+
+    #imgframe:hover {
+
+        opacity: 0.5;
+        filter: alpha(opacity=40);
     }
     
     #faculty {
@@ -50,11 +58,60 @@
         margin-bottom: 10px;
         margin-top: -40px;
     }
+
     
     #img1 {
         width: 100%;
+         opacity: 1.0;
+        filter: alpha(opacity=100);
     }
+
+    #img1:hover {
+        opacity: 0.5;
+        filter: alpha(opacity=40);
+    }
+
+
+    ul.timeline {
+    
+    list-style-type: none;
+    position: relative;
+}
+
+
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
 </style>
+
+
+
+
+
 <header class="header">
     <div class="header-overlay">
         <div class="container header-container">
@@ -205,6 +262,20 @@
                 <li data-target="#carousel-testimonial" data-slide-to="3"></li>
                 <li data-target="#carousel-testimonial" data-slide-to="4"></li>
                 <li data-target="#carousel-testimonial" data-slide-to="5"></li>
+                <li data-target="#carousel-testimonial" data-slide-to="6"></li>
+                <li data-target="#carousel-testimonial" data-slide-to="7"></li>
+                <li data-target="#carousel-testimonial" data-slide-to="8"></li>
+                <li data-target="#carousel-testimonial" data-slide-to="9"></li>
+                <li data-target="#carousel-testimonial" data-slide-to="10"></li>
+                <li data-target="#carousel-testimonial" data-slide-to="11"></li>
+                <li data-target="#carousel-testimonial" data-slide-to="12"></li>
+                <li data-target="#carousel-testimonial" data-slide-to="13"></li>
+                <li data-target="#carousel-testimonial" data-slide-to="14"></li>
+                 <li data-target="#carousel-testimonial" data-slide-to="15"></li>
+                 <li data-target="#carousel-testimonial" data-slide-to="16"></li>
+                <li data-target="#carousel-testimonial" data-slide-to="17"></li>
+
+
 
             </ol>
             <!-- wrapper for slides -->
@@ -257,6 +328,113 @@
                     </div>
                 </div>
 
+                <!-- item 04 -->
+                <div class="item text-center">
+                    <img src="{% static 'images/avi.jpeg' %}" alt="testimonial" class="center-block">
+                    <div class="testimonial-caption">
+                        <h2>Praveen Adhavarapu</h2>
+                        <h4><span> Operations </span>Head</h4>
+                    </div>
+                </div>
+
+                <!-- item 04 -->
+                <div class="item text-center">
+                    <img src="{% static 'images/avi.jpeg' %}" alt="testimonial" class="center-block">
+                    <div class="testimonial-caption">
+                        <h2>Toney Manalil</h2>
+                        <h4><span> Ath </span>Head</h4>
+                    </div>
+                </div>
+
+                <!-- item 04 -->
+                <div class="item text-center">
+                    <img src="{% static 'images/avi.jpeg' %}" alt="testimonial" class="center-block">
+                    <div class="testimonial-caption">
+                        <h2>Harsh Verma</h2>
+                        <h4><span> Ath </span>Head</h4>
+                    </div>
+                </div>
+
+                <div class="item text-center">
+                    <img src="{% static 'images/avi.jpeg' %}" alt="testimonial" class="center-block">
+                    <div class="testimonial-caption">
+                        <h2>Anisha Majumdar</h2>
+                        <h4><span> Techteam </span>Head</h4>
+                    </div>
+                </div>
+
+                <div class="item text-center">
+                    <img src="{% static 'images/avi.jpeg' %}" alt="testimonial" class="center-block">
+                    <div class="testimonial-caption">
+                        <h2>Sudheep Chinta</h2>
+                        <h4><span> Techteam </span>Head</h4>
+                    </div>
+                </div>
+
+                <div class="item text-center">
+                    <img src="{% static 'images/avi.jpeg' %}" alt="testimonial" class="center-block">
+                    <div class="testimonial-caption">
+                        <h2>Nidhi Garg</h2>
+                        <h4><span> Public Relations</span>Head</h4>
+                    </div>
+                </div>
+
+                <div class="item text-center">
+                    <img src="{% static 'images/avi.jpeg' %}" alt="testimonial" class="center-block">
+                    <div class="testimonial-caption">
+                        <h2>Shivam Goyan</h2>
+                        <h4><span> Sponsorship </span>Head</h4>
+                    </div>
+                </div>
+
+                <div class="item text-center">
+                    <img src="{% static 'images/avi.jpeg' %}" alt="testimonial" class="center-block">
+                    <div class="testimonial-caption">
+                        <h2>Hrittik Dayal</h2>
+                        <h4><span> Creative Team </span>Head</h4>
+                    </div>
+                </div>
+
+                <div class="item text-center">
+                    <img src="{% static 'images/avi.jpeg' %}" alt="testimonial" class="center-block">
+                    <div class="testimonial-caption">
+                        <h2>Satveer Singh</h2>
+                        <h4><span> Event </span>Head</h4>
+                    </div>
+                </div>
+
+
+                <div class="item text-center">
+                    <img src="{% static 'images/avi.jpeg' %}" alt="testimonial" class="center-block">
+                    <div class="testimonial-caption">
+                        <h2>Sravan Gande</h2>
+                        <h4><span> Baja </span>Coordinator</h4>
+                    </div>
+                </div>
+
+
+                <div class="item text-center">
+                    <img src="{% static 'images/avi.jpeg' %}" alt="testimonial" class="center-block">
+                    <div class="testimonial-caption">
+                        <h2>Madhav Mishra</h2>
+                        <h4><span> Workshop </span>Head</h4>
+                    </div>
+                </div>
+
+
+                <div class="item text-center">
+                    <img src="{% static 'images/avi.jpeg' %}" alt="testimonial" class="center-block">
+                    <div class="testimonial-caption">
+                        <h2>Pradyumn Thakur</h2>
+                        <h4><span> Workshop </span>Head</h4>
+                    </div>
+                </div>
+
+
+
+
+
+
 
             </div>
         </div>
@@ -275,6 +453,35 @@
 <!----FESTS-->
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section id="fests" style="margin-top: 40px;">
     <h1 class="about" style="text-align: center;margin-bottom:30px;">
         <span class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">OUR</span><span class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s" style="color: #129CF3;"> FESTS<span>
@@ -283,20 +490,121 @@
 
     <div class="row">
 
-      <div class="col-md-6 profile-pic text-center wow bounceInUp" style="margin-bottom: 30px;">
+<!--      <div class="col-md-4 profile-pic text-center wow bounceInUp" style="margin-bottom: 30px;">-->
 
 
-        <a href="https://www.facebook.com/arhn.nitd/" target="_blank"> <img src="/static/images/aarohan.jpg"
-            id="img1"></a>
-        <h4 style="font-weight: 800;">AAROHAN</h4>
+<!--        <a href="https://www.facebook.com/arhn.nitd/" target="_blank"> <img src="/static/images/aarohanh.jpg"-->
+<!--            id="img1"></a>-->
+<!--        <h4 style="font-weight: 800;">AAROHAN</h4>-->
 
-      </div>
-      <div class="col-md-6 profile-pic text-center wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
+<!--      </div>-->
+
+      <div class="col-md-4 profile-pic text-center wow bounceInUp" data-wow-duration="1s" data-wow-delay=".5s">
 
 
-        <a href="https://www.facebook.com/aavishkar.nitd/" target="_blank"> <img src="/static/images/aavishkar.jpg"
+        <a href="https://www.facebook.com/aavishkar.nitd/" target="_blank"> <img  src="/static/images/aavishkar.jpg"
             id="imgframe"></a>
         <h4 style="font-weight: 800;">AAVISHKAR</h4>
+
+
+<div id="sample">
+<div class="container mt-5 mb-5" >
+	<div class="row">
+		<div class="col-md-6 offset-md-3">
+
+			<ul class="timeline">
+				<li>
+					<p>2020</p>
+
+					</li>
+				<li>
+					<p>2019</p>
+
+					</li>
+				<li>
+					<p> 2018</p>
+					</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</div>
+
+
+      </div>
+
+
+        <div class="col-md-4 profile-pic text-center wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
+
+
+        <a href="https://www.facebook.com/aavishkar.nitd/" target="_blank"> <img  src="/static/images/aarohanfinal.jpg"
+            id="imgframe"></a>
+        <h4 style="font-weight: 800;">AAROHAN</h4>
+
+
+<div class="container mt-5 mb-5" >
+	<div class="row">
+		<div class="col-md-6 offset-md-3">
+
+			<ul class="timeline">
+				<li>
+					<p>2020</p>
+
+					</li>
+				<li>
+					<p>2019</p>
+
+					</li>
+				<li>
+					<p> 2018</p>
+					</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+
+      </div>
+
+
+
+
+        <div class="col-md-4 profile-pic text-center wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
+
+
+        <a href="https://www.facebook.com/aavishkar.nitd/" target="_blank"> <img  src="/static/images/moto.jpeg"
+            id="imgframe"></a>
+        <h4 style="font-weight: 800;">MOTO ZUNDUNG</h4>
+
+
+
+<div class="container mt-5 mb-5" >
+	<div class="row">
+		<div class="col-md-6 offset-md-3">
+
+			<ul class="timeline">
+				<li>
+					<p>2020</p>
+
+					</li>
+				<li>
+					<p>2019</p>
+
+					</li>
+				<li>
+					<p> 2018</p>
+					</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+
       </div>
 
     </div>
@@ -491,7 +799,5 @@
     </div>
   </div>
 </section>
-
-
 
 {% endblock body %}
